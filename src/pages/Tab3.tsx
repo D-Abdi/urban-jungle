@@ -1,34 +1,13 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab3.css';
-import * as THREE from 'three';
+import React, { useState ,useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useState ,useRef } from 'react';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+// Import TSX files of the models
+import TutorialDonut from '../components/tsxModels/TutorialDonut';
 
 const Tab3: React.FC = () => {
-  
-  function Box(props: JSX.IntrinsicElements['mesh']) {
-    // This reference will give us direct access to the mesh
-    const mesh = useRef<THREE.Mesh>(null!)
-    // Set up state for the hovered and active state
-    const [hovered, setHover] = useState(false)
-    const [active, setActive] = useState(false)
-    // Rotate mesh every frame, this is outside of React without overhead
-    useFrame((state, delta) => (mesh.current.rotation.x += 0.01))
-  
-    return (
-      <mesh
-        {...props}
-        ref={mesh}
-        scale={active ? 1.5 : 1}
-        onClick={(event) => setActive(!active)}
-        onPointerOver={(event) => setHover(true)}
-        onPointerOut={(event) => setHover(false)}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-      </mesh>
-    )
-  }
-  
+
   return (
     <IonPage>
       <IonHeader>
@@ -38,10 +17,11 @@ const Tab3: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen>
         <Canvas>
+          <Suspense fallback={null}>
+            <TutorialDonut position={[0, 0, 0]}/>
+          </Suspense>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-          <Box position={[-1.2, 0, 0]} />
-          <Box position={[1.2, 0, 0]} />
         </Canvas>
       </IonContent>
     </IonPage>
