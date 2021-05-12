@@ -26,8 +26,6 @@ export default function TutorialDonut(props: JSX.IntrinsicElements['group']) {
 
   const [hover, setHover] = useState(false);
 
-
-
   const group = useRef<THREE.Group>()
   const { nodes, materials } = useGLTF('assets/models/tutorialDonut.glb') as GLTFResult
   return (
@@ -36,11 +34,11 @@ export default function TutorialDonut(props: JSX.IntrinsicElements['group']) {
         geometry={nodes.Donut.geometry}
         material={materials.Material}
         position={[0, 0, 0]}
-        rotation={[0.5, 0.5, 0]}
+        rotation={[0, 0, 0]}
         onClick={onClick}
         onPointerOver={(event) => setHover(true)}
         onPointerOut={(event) => setHover(false)}
-        scale={ (hover)? [40, 40, 40] : [30, 30, 30]}>
+        scale={ (hover)? [32, 32, 32] : [30, 30, 30]}>
         <mesh geometry={nodes.Icing001.geometry} material={materials['Material.002']} position={[0, 0, 0]} />
       </mesh>
     </group>
