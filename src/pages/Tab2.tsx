@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import { IonButton, IonCard, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
-import ExploreContainer from '../components/ExploreContainer';
+import ExploreContainer from '../components/presentational/ExploreContainer/ExploreContainer';
 import './Tab2.css';
 
 // Import the fetchQuizQuestions function
@@ -10,7 +10,7 @@ import { fetchQuizQuestions } from '../utils/API'
 
 //Types
 import { QuestionState, Difficulty } from '../utils/API';
-import QuestionCard from '../components/QuestionCard';
+import QuestionCard from '../components/presentational/QuestionCard/QuestionCard';
 
 // Export the answers object to be used in QuestionCard
 export type AnswerObject = {

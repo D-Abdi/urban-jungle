@@ -4,7 +4,7 @@ import React, { useState ,useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 // Import TSX files of the models
-import TutorialDonut from '../components/tsxModels/TutorialDonut';
+import TutorialDonut from '../components/presentational/tsxModels/TutorialDonut';
 
 const Tab3: React.FC = () => {
 
