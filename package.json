@@ -10,6 +10,7 @@
     "@ionic/react-hooks": "0.0.8",
     "@ionic/react-router": "^5.5.0",
     "@react-three/drei": "^4.3.3",
+    "@react-three/xr": "^3.1.1",
     "@tensorflow-models/coco-ssd": "^2.2.2",
     "@tensorflow/tfjs": "^3.5.0",
     "@testing-library/jest-dom": "^5.11.9",

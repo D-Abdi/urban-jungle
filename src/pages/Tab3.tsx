@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab3.css';
 import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 // Import TSX files of the models
 import TutorialDonut from '../components/tsxModels/TutorialDonut';
@@ -19,13 +19,13 @@ const Tab3: React.FC = () => {
         <Canvas>
           <PerspectiveCamera makeDefault 
             rotation={[0,0,0]}
-            position={[0,0,7.5]}/>
-          <OrbitControls/>
+            position={[50,150,400]}/>
+          <OrbitControls />
           <Suspense fallback={null}>
-            <TutorialDonut position={[0, 0, 0]}/>
+            <TutorialDonut position={[0,0,0]} />
           </Suspense>
           <ambientLight />
-          <pointLight position={[10, 10, 10]} />
+          <pointLight position={[600, 75, 600]} />
         </Canvas>
       </IonContent>
     </IonPage>
