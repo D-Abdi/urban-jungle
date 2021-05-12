@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 // Import TSX files of the models
 import TutorialDonut from '../components/tsxModels/TutorialDonut';
+import TestCity from '../components/tsxModels/TestCity';
 
 const Tab3: React.FC = () => {
 
@@ -19,10 +20,10 @@ const Tab3: React.FC = () => {
         <Canvas>
           <PerspectiveCamera makeDefault 
             rotation={[0,0,0]}
-            position={[50,150,400]}/>
+            position={[100,50,100]}/>
           <OrbitControls />
           <Suspense fallback={null}>
-            <TutorialDonut position={[0,0,0]} />
+            <TestCity position={[0,0,0]} />
           </Suspense>
           <ambientLight />
           <pointLight position={[600, 75, 600]} />
