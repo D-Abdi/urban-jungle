@@ -1,18 +1,27 @@
-import React, { useRef, useEffect, useCallback, useState } from 'react'
+import React, { useRef, useEffect, useCallback, useState } from 'react';
 import * as tf from "@tensorflow/tfjs";
 import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
+import { Link, Redirect } from 'react-router-dom'
 
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { drawRect }  from '../components/drawRect';
-
-import ExploreContainer from '../components/ExploreContainer'; 
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { drawRect }  from '../components/functional/drawRect/drawRect';
+ 
+import ExploreContainer from '../components/presentational/ExploreContainer/ExploreContainer'; 
 import './Tab1.css';
+import { type } from 'node:os';
 
-const Tab1: React.FC = () => {
-  let webcamRef = useRef(null);
-  let canvasRef = useRef(null);
-  const [imgSrc, setImgSrc] = useState(null);
+type Props = {
+  webcamRef: any;
+  canvasRef: any;
+}
+
+const videoConstraints = {
+  facingMode: "user"
+};
+
+const Tab1: React.FC<Props> = ({ webcamRef, canvasRef }) => {
+  let [detectedObject, setDetectedObject] = useState('')
 
   // Main function
   const runCoco = async () => {
@@ -50,19 +59,32 @@ const Tab1: React.FC = () => {
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
       drawRect(obj, ctx)
+
+      if (obj[0] !== undefined && obj[0].class !== false) {
+        setDetectedObject(obj[0].class)
+      } else return 
+
+      console.log(obj[0].class)
+      
+
     }
   };
 
   // use run coco every cycle
-  useEffect(()=>{runCoco()},[]);
+  useEffect(()=> {
+    runCoco();
+  },[detect]);
 
-  // Function for taking a picture
-  const capture = useCallback(() => {
-    const image = webcamRef.current.getScreenshot();
-    setImgSrc(image)     
-    },
-    [webcamRef]
-  )
+  // Better function for taking a picture
+  const stop = () => {
+    let stream = webcamRef.current.video.srcObject;
+    const tracks = stream.getTracks();
+
+    tracks.forEach(track => track.stop());
+    webcamRef.current.video.srcObject = null;
+    console.log(detectedObject)  
+    
+  }
 
   return (
     <IonPage>
@@ -77,17 +99,16 @@ const Tab1: React.FC = () => {
             muted={true} 
             id="OD-Webcam"
             screenshotFormat="image/jpeg"
+            videoConstraints={videoConstraints}
           />
 
-          <canvas
+        <canvas
             ref={canvasRef}
             id="OD-Canvas"
           />
-          {/* {imgSrc && (
-            <img src={imgSrc} id="OD-Snapshot" />
-            )} */}
+        
+        <IonButton onClick={stop}>Snap a pic</IonButton>
           
-          <button onClick={capture}>Snap a pic</button>
       </IonContent>
     </IonPage>
   );

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AnswerObject } from '../pages/Tab2'
+import { AnswerObject } from '../../../pages/Tab2'
 
 import { IonCardSubtitle } from '@ionic/react';
 
