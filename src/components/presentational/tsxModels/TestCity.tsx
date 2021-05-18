@@ -61,8 +61,10 @@ type GLTFResult = GLTF & {
   }
 }
 
-export default function Model(props: JSX.IntrinsicElements['group']) {
+export default function TestCity(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>()
+
+  // BUILD: Change to '2020_2021/cmgt_tle34_t3/assets/models/testCity.glb' for build
   const { nodes, materials } = useGLTF('assets/models/testCity.glb') as GLTFResult
 
   function displayInfo() {
@@ -327,4 +329,5 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
+// BUILD: Change to '2020_2021/cmgt_tle34_t3/assets/models/testCity.glb' for build
 useGLTF.preload('assets/models/testCity.glb')
