@@ -331,7 +331,7 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         position={[3.84, -8.81 + waterHeight, 7.69]}
         scale={[123, waterHeight, 123]}
         // onPointerUp instead of onClick for mobile support
-        onPointerUp={ raiseWater }
+        // onPointerUp={ raiseWater }
       />
     </group>
   )

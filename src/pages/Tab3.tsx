@@ -18,6 +18,13 @@ const Tab3: React.FC = () => {
     console.log("WebXR isn't available");
   }
 
+  // Load models conditionaly
+  let points = 5;
+  let model = <TutorialDonut position={[0,0,0]} scale={[20,20,20]} />;
+  if (points < 10) {
+    model = <TestCity position={[0,0,0]} />;
+  } 
+
   return (
     <IonPage>
       <IonHeader>
@@ -33,7 +40,7 @@ const Tab3: React.FC = () => {
             position={[100,50,100]}/>
           <OrbitControls />
           <Suspense fallback={null}>
-            <TestCity position={[0,0,0]} />
+            {model}
           </Suspense>
           <ambientLight />
           <pointLight position={[600, 75, 600]} />
