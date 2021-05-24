@@ -6,7 +6,7 @@ type Props = {
     questionNr: number;
     totalQuestions: number;
     question: string;
-    answers: string[];
+    answers: [];
 }
 
 const QuizUI: React.FC<Props> = ({questionNr, totalQuestions, question, answers}) => {

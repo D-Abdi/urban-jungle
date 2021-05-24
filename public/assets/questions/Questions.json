@@ -3,25 +3,26 @@
     "category": "Vervoer",
     "question": "Welke autorit is schadelijker voor het milieu?",
     "answers": [
-      {
-        "answer" : "Een autorit binnen de bebouwde kom",
-        "score" : 0
-      },
-      {
-        "answer" : "Een rit buiten de bebouwde kom. ",
-        "score" : 2
-      }
+      [
+        "Een autorit binnen de bebouwde kom",
+         0
+      ],
+      [
+        "Een rit buiten de bebouwde kom. ",
+         2
+      ]
     ]
   },
   {
     "category": "Vervoer",
-    "type": "multiple",
-    "difficulty": "hard",
     "question": "Is het milieuvriendelijker om tijdens dal- of spitsuren te reizen met de trein?",
-    "correct_answer": "Tijdens daluren",
-    "incorrect_answers": [
-      "Tijdens de spitsuren",
-      "Tijdens de daluren"
+    "answers": [ 
+      [
+        "Tijdens daluren", 2
+      ],
+      [
+        "Tijdens de spitsuren", 0
+      ]
     ]
   },
   {

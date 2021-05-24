@@ -5,20 +5,20 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import QuizUI from '../components/presentational/QuizUI/QuizUI';
 import './Tab2.css';
 
+import axios from 'axios';
+
 function Quiz(){
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(null);
   React.useEffect(() => {
-    fetch("/public/assets/questions/Questions.json")
-      .then(res => res.json())
+    axios.get("/assets/questions/Questions.json")
       .then(
-        (result) => {
+        res => {
           setIsLoaded(true);
-          setItems(result);
+          setItems(res.data);
 
-          console.log(result);
-          
+          console.log(res.data);          
         },
         (error) => {
           setIsLoaded(true);
@@ -28,20 +28,22 @@ function Quiz(){
   }, [])
 
   console.log(isLoaded);
-  return (
-    <div> 
-      {
-        items && items.length>0 && items.map((item)=>
-          <QuizUI 
-            questionNr={1}
-            totalQuestions={2}
-            question={item.question}
-            answers={item.answers}
-          />
-        )
-      }
-    </div>
-  )
+  console.log(items);
+
+  if(items && items !== null){
+    return (
+      <QuizUI 
+        questionNr={1}
+        totalQuestions={2}
+        question={items[1].question}
+        answers={items[1].answers}
+      />
+    )   
+  }else {
+    return(
+      <p> Aan het laden!</p>
+    )
+  }
 }
 const Tab2: React.FC = () => {
 
