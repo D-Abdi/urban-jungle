@@ -1,0 +1,63 @@
+[
+  {
+    "category": "Vervoer",
+    "question": "Welke autorit is schadelijker voor het milieu?",
+    "answers": [
+      {
+        "answer" : "Een autorit binnen de bebouwde kom",
+        "score" : 0
+      },
+      {
+        "answer" : "Een rit buiten de bebouwde kom. ",
+        "score" : 2
+      }
+    ]
+  },
+  {
+    "category": "Vervoer",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Is het milieuvriendelijker om tijdens dal- of spitsuren te reizen met de trein?",
+    "correct_answer": "Tijdens daluren",
+    "incorrect_answers": [
+      "Tijdens de spitsuren",
+      "Tijdens de daluren"
+    ]
+  },
+  {
+    "category": "Vervoer",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Wat is een schoner vervoersmiddel?",
+    "correct_answer": "Een reguliere (benzine) auto",
+    "incorrect_answers": [
+      "Een benzinescooter",
+      "Een reguliere (benzine) auto"
+    ]
+  },
+  {
+    "category": "Vervoer",
+    "type":"multiple",
+    "difficulty":"easy",
+    "question": "Wanneer reis jij met de fiets?",
+    "answers": ["hele antwoord", "ant2", "ant3"],
+    "hele antwoord": 1
+  }, 
+  {
+    "category":"Vervoer",
+    "type":"multiple",
+    "difficulty":"",
+    "question": "",
+    "correct_answer": "",
+    "incorrect_answers": []
+  },
+  {
+    "category":"Vervoer",
+    "type":"multiple",
+    "difficulty":"",
+    "question": "",
+    "correct_answer": "",
+    "incorrect_answers": []
+  }     
+]
+
