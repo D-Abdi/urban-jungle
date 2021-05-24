@@ -16,12 +16,14 @@ const QuizUI: React.FC = () => {
         console.log("Choose answer: " + answer[0]);
         setScore(score + answer[1])
         console.log(score);
+        setQuestionNr(questionNr+1)
+        setQA(questionNr)
     }
 
     function setQA (number){
         if(items !== null){
-        setQuestion(items[number].question)
-        setAnswers(items[number].answers)
+            setQuestion(items[number].question)
+            setAnswers(items[number].answers)
         }
     }
     
