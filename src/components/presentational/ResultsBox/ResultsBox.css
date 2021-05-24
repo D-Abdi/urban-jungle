@@ -29,7 +29,7 @@ ion-button.openModalButton{
     --background: rgba(255, 255, 255, 0.3);
 }
 
-.ion-page ion-content{
+.tipsModal .ion-page ion-content{
     --background: rgba(255, 255, 255, 0.3);
 }
 

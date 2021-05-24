@@ -1,4 +1,4 @@
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonItem, IonLabel, IonList, IonModal, IonRow, IonThumbnail } from '@ionic/react';
+import { IonButton, IonCol, IonContent, IonItem, IonLabel, IonList, IonModal, IonRow, IonThumbnail } from '@ionic/react';
 import * as React from 'react';
 import { useState } from 'react';
 import './ResultsBox.css';

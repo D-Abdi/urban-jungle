@@ -71,12 +71,6 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
     alert("Dit gebouw is roze! Hier kan je op den duur lezen over de duurzaamheid van dit object..")
   }
 
-  // Commented out at the bottom
-  const [waterHeight, setWaterHeight] = useState(0.41)
-  function raiseWater() {
-    setWaterHeight(waterHeight + 0.5)
-  }
-
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
@@ -320,8 +314,8 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
       <mesh
         geometry={nodes.Water.geometry}
         material={materials.Water}
-        position={[3.84, -8.81 + waterHeight, 7.69]}
-        scale={[123, waterHeight, 123]}
+        position={[3.84, -8.81, 7.69]}
+        scale={[123, 8, 123]}
         // onPointerUp instead of onClick for mobile support
         // onPointerUp={ raiseWater }
       />
