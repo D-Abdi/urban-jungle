@@ -8,35 +8,26 @@ import './Tab2.css';
 import axios from 'axios';
 
 function Quiz(){
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState(null);
   React.useEffect(() => {
     axios.get("/assets/questions/Questions.json")
       .then(
         res => {
-          setIsLoaded(true);
-          setItems(res.data);
-
-          console.log(res.data);          
+          setItems(res.data);      
         },
         (error) => {
-          setIsLoaded(true);
-          setError(error);
+          console.log(error);
         }
       )
   }, [])
-
-  console.log(isLoaded);
-  console.log(items);
 
   if(items && items !== null){
     return (
       <QuizUI 
         questionNr={1}
         totalQuestions={2}
-        question={items[1].question}
-        answers={items[1].answers}
+        question={items[0].question}
+        answers={items[0].answers}
       />
     )   
   }else {

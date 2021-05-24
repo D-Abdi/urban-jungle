@@ -10,8 +10,11 @@ type Props = {
 }
 
 const QuizUI: React.FC<Props> = ({questionNr, totalQuestions, question, answers}) => {
-    function chooseAnswer(e) {
-        console.log("Choose answer: " + e);
+    const [score, setScore] = useState(0)
+    function chooseAnswer(answer) {
+        console.log("Choose answer: " + answer[0]);
+        setScore(score + answer[1])
+        console.log(score);
     }
 
     return(
@@ -22,8 +25,8 @@ const QuizUI: React.FC<Props> = ({questionNr, totalQuestions, question, answers}
             <p>{question}</p>
             <div>
                 {answers.map((answer, index) => (
-                    <div key={index} className="answer" onClick={(e) => chooseAnswer(e)}>
-                        {answer}
+                    <div key={index} className="answer" onClick={(e) => chooseAnswer(answer)}>
+                        {answer[0]}
                     </div>
                 ))}
             </div>
