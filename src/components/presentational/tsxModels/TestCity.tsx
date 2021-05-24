@@ -6,7 +6,6 @@ import * as THREE from 'three'
 import React, { useRef, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
-import { useHitTest } from '@react-three/xr'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -72,18 +71,11 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
     alert("Dit gebouw is roze! Hier kan je op den duur lezen over de duurzaamheid van dit object..")
   }
 
+  // Commented out at the bottom
   const [waterHeight, setWaterHeight] = useState(0.41)
-
   function raiseWater() {
     setWaterHeight(waterHeight + 0.5)
   }
-
-  // Position on the real world
-  useHitTest((hitMatrix, hit) => {
-    let quaternion = new THREE.Quaternion;
-    quaternion.setFromAxisAngle(group.current.scale, 0)
-    hitMatrix.decompose(group.current.position, group.current.quaternion, group.current.scale)
-  })
 
   return (
     <group ref={group} {...props} dispose={null}>

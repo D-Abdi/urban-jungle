@@ -39,8 +39,7 @@ const Tab3: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <ARCanvas sessionInit={{ requiredFeatures: ['hit-test'] }}>
-          <DefaultXRControllers />
+        <Canvas>
           <PerspectiveCamera makeDefault 
             rotation={[0,0,0]}
             position={[100,50,100]}/>
@@ -50,7 +49,7 @@ const Tab3: React.FC = () => {
           </Suspense>
           <ambientLight />
           <pointLight position={[600, 75, 600]} />
-        </ARCanvas>
+        </Canvas>
         <ResultsBox category={category} points={points} />
       </IonContent>
     </IonPage>
