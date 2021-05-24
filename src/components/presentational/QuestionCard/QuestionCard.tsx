@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AnswerObject } from '../../../pages/Tab2'
 
-import { IonCardSubtitle } from '@ionic/react';
+import {IonCardSubtitle, IonCol, IonGrid, IonRow} from '@ionic/react';
 
 import './QuestionCard.css'
 
@@ -14,20 +14,29 @@ type Props = {
     totalQuestions: number;
 }
 
+
 const QuestionCard: React.FC<Props> = ({ question, answers, callback, userAnswer, questionNr, totalQuestions }) => (
     <div className="QuestionCard">
-        <IonCardSubtitle>
-            Question: {questionNr} / {totalQuestions}
-        </IonCardSubtitle>
-        <p dangerouslySetInnerHTML={{ __html: question }} />
-        <div>
-            {answers.map(answer => (
-                <div key={answer}>
-                    <button className="QuestionBtn" disabled={userAnswer ? true : false} value={answer} onClick={callback}>
-                        <span dangerouslySetInnerHTML={{ __html: answer }} />
-                    </button>
-                </div>
-            ))}
+        <div className="Questions">
+            <IonCardSubtitle>
+                Question: {questionNr} / {totalQuestions}
+            </IonCardSubtitle>
+            <p dangerouslySetInnerHTML={{ __html: question }} />
+        </div>
+        <div className="Answers">
+            <IonGrid>
+                <IonRow>
+                    <IonCol>
+                        {answers.map(answer => (
+                            <div key={answer}>
+                                <button className="QuestionBtn" disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+                                    <span dangerouslySetInnerHTML={{ __html: answer }} />
+                                </button>
+                            </div>
+                        ))}
+                    </IonCol>
+                </IonRow>
+            </IonGrid>
         </div>
     </div>
 )
