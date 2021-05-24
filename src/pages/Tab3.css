@@ -1,0 +1,4 @@
+/* Push ARButton 10px above navigationbar */
+#ARButton{
+    bottom: 66px !important; 
+}

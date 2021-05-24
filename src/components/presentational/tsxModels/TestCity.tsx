@@ -61,16 +61,18 @@ type GLTFResult = GLTF & {
   }
 }
 
-export default function Model(props: JSX.IntrinsicElements['group']) {
+export default function TestCity(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>()
+
+  // BUILD: Change to '2020_2021/cmgt_tle34_t3/assets/models/testCity.glb' for build
   const { nodes, materials } = useGLTF('assets/models/testCity.glb') as GLTFResult
 
   function displayInfo() {
     alert("Dit gebouw is roze! Hier kan je op den duur lezen over de duurzaamheid van dit object..")
   }
 
+  // Commented out at the bottom
   const [waterHeight, setWaterHeight] = useState(0.41)
-
   function raiseWater() {
     setWaterHeight(waterHeight + 0.5)
   }
@@ -321,10 +323,11 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
         position={[3.84, -8.81 + waterHeight, 7.69]}
         scale={[123, waterHeight, 123]}
         // onPointerUp instead of onClick for mobile support
-        onPointerUp={ raiseWater }
+        // onPointerUp={ raiseWater }
       />
     </group>
   )
 }
 
+// BUILD: Change to '2020_2021/cmgt_tle34_t3/assets/models/testCity.glb' for build
 useGLTF.preload('assets/models/testCity.glb')
