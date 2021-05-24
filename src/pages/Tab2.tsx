@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useState } from 'react';
 import { IonButton, IonCard, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
-import ExploreContainer from '../components/presentational/ExploreContainer/ExploreContainer';
 import './Tab2.css';
 
 // Import the fetchQuizQuestions function

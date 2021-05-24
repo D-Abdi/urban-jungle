@@ -6,8 +6,7 @@ import { Link, Redirect } from 'react-router-dom'
 
 import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { drawRect }  from '../components/functional/drawRect/drawRect';
- 
-import ExploreContainer from '../components/presentational/ExploreContainer/ExploreContainer'; 
+
 import './Tab1.css';
 import { type } from 'node:os';
 

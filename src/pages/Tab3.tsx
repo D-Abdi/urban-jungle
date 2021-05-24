@@ -1,23 +1,16 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab3.css';
 import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { ARCanvas, DefaultXRControllers } from '@react-three/xr';
+import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import ResultsBox from '../components/presentational/ResultsBox/ResultsBox';
+
 // Import TSX files of the models
 import TutorialDonut from '../components/presentational/tsxModels/TutorialDonut';
 import TestCity from '../components/presentational/tsxModels/TestCity';
-import ResultsBox from '../components/presentational/ResultsBox/ResultsBox';
+import { CubeTextureLoader } from 'three';
 
 const Tab3: React.FC = () => {
-  
-  if ("xr" in window.navigator) {
-    /* WebXR can be used! */
-    console.log("WebXR is available!");
-  } else {
-    /* WebXR isn't available */
-    console.log("WebXR isn't available");
-  }
 
   // This needs to be changed to the value recieved from the quiz
   let categories = ["vervoer", "voedsel", "afval"]
@@ -27,28 +20,51 @@ const Tab3: React.FC = () => {
   // Load models conditionaly
   let points = Math.floor(Math.random()*21);
   let model = <TutorialDonut position={[0,0,0]} scale={[20,20,20]} />;
-  if (points < 10) {
-    model = <TestCity position={[0,0,0]} />;
+  if (points < 11) {
+    model = <TestCity position={[0,0,0]} castShadow receiveShadow />;
   } 
+
+  // Loads the skybox texture and applies it to the scene.
+  function SkyBox() {
+    const { scene } = useThree();
+    const loader = new CubeTextureLoader();
+    // The CubeTextureLoader load method takes an array of urls representing all 6 sides of the cube.
+    const texture = loader
+    .setPath( 'assets/skybox/' )
+    .load([
+      "skybox-right.png",   // right
+      "skybox-left.png",    // left
+      "skybox-top.png",     // top
+      "skybox-bottom.png",  // bottom
+      "skybox-front.png",   // front
+      "skybox-back.png",    // back
+    ]);
+    // Set the scene background property to the resulting texture.
+    scene.background = texture;
+    return null;
+  }
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>AR resultaat</IonTitle>
+          <IonTitle>3D viewer</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <Canvas>
+        <Canvas shadows>
           <PerspectiveCamera makeDefault 
             rotation={[0,0,0]}
-            position={[100,50,100]}/>
+            position={[100,50,100]} />
           <OrbitControls />
           <Suspense fallback={null}>
             {model}
           </Suspense>
-          <ambientLight />
-          <pointLight position={[600, 75, 600]} />
+          <ambientLight intensity={0.2} />
+          <pointLight 
+            position={[600, 750, 600]} 
+            intensity={1} />
+          <SkyBox />
         </Canvas>
         <ResultsBox category={category} points={points} />
       </IonContent>
