@@ -20,7 +20,7 @@ const Tab3: React.FC = () => {
   // Load models conditionaly
   let points = Math.floor(Math.random()*21);
   let model = <TutorialDonut position={[0,0,0]} scale={[20,20,20]} />;
-  if (points < 10) {
+  if (points < 11) {
     model = <TestCity position={[0,0,0]} castShadow receiveShadow />;
   } 
 
