@@ -27,7 +27,7 @@ const QuizUI: React.FC = () => {
     
     React.useEffect(()=>{
         setQA(0)
-    })
+    },[items])
 
     React.useEffect(() => {
         axios.get("/assets/questions/Questions.json")
@@ -36,7 +36,6 @@ const QuizUI: React.FC = () => {
                     setItems(res.data); 
                 }
             )
-            .then(()=>setQA(0))
     }, [])
     if(answers && answers !== null){
         return(
