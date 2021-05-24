@@ -64,7 +64,6 @@ type GLTFResult = GLTF & {
 export default function TestCity(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>()
 
-  // BUILD: Change to '2020_2021/cmgt_tle34_t3/assets/models/testCity.glb' for build
   const { nodes, materials } = useGLTF('assets/models/testCity.glb') as GLTFResult
 
   function displayInfo() {
@@ -315,13 +314,10 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         geometry={nodes.Water.geometry}
         material={materials.Water}
         position={[3.84, -8.81, 7.69]}
-        scale={[123, 8, 123]}
-        // onPointerUp instead of onClick for mobile support
-        // onPointerUp={ raiseWater }
+        scale={[123, 0.41, 123]}
       />
     </group>
   )
 }
 
-// BUILD: Change to '2020_2021/cmgt_tle34_t3/assets/models/testCity.glb' for build
 useGLTF.preload('assets/models/testCity.glb')
