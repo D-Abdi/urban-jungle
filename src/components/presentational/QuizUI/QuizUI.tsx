@@ -5,8 +5,12 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router';
 
-const QuizUI: React.FC = () => {
-    const [score, setScore] = useState(0);
+type Props = {
+    setScore: any;
+}
+
+const QuizUI: React.FC<Props> = ({setScore}) => {
+    
     const [items, setItems] = useState(null);
     const [questionNr, setQuestionNr] = useState(1);
     const [totalQuestions, setTotalQuestions] = useState(9);

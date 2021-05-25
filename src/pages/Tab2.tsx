@@ -4,7 +4,11 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import QuizUI from '../components/presentational/QuizUI/QuizUI';
 import './Tab2.css';
 
-const Tab2: React.FC = () => {
+type Props = {
+  setScore: any;
+}
+
+const Tab2: React.FC<Props> = ({setScore}) => {
 
   return (
     <IonPage>
@@ -14,7 +18,7 @@ const Tab2: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <QuizUI/>
+        <QuizUI setScore = {setScore}/>
       </IonContent>
     </IonPage>
   );
