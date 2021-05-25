@@ -1,6 +1,6 @@
 #OD-Webcam {
   position: absolute;
-  display: flex;
+  align-content: center;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -17,17 +17,6 @@
   right: 0;
   text-align: center;
   z-index: 3;
-}
-
-#OD-Snapshot {
-  position: absolute;
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 5;
-  height: 500px;
 }
 
 #cameraOutline {

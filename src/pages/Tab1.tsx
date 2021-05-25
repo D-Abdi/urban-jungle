@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useCallback, useState } from 'react';
 import * as tf from "@tensorflow/tfjs";
 import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
-import { Link, Redirect } from 'react-router-dom'
+import { Link, Redirect, useHistory } from 'react-router-dom'
 
 import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
 import { cameraOutline } from 'ionicons/icons';
@@ -15,14 +15,17 @@ import { type } from 'node:os';
 type Props = {
   webcamRef: any;
   canvasRef: any;
+  detectedObject: any;
+  setDetectedObject: any;
 }
 
 const videoConstraints = {
   facingMode: "user"
 };
 
-const Tab1: React.FC<Props> = ({ webcamRef, canvasRef }) => {
-  let [detectedObject, setDetectedObject] = useState('')
+const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetectedObject }) => {
+  // History
+  let history = useHistory();
 
   // Main function
   const runCoco = async () => {
@@ -85,6 +88,7 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef }) => {
     webcamRef.current.video.srcObject = null;
     console.log(detectedObject)  
     
+    history.push('/Tab2')
   }
 
   return (
