@@ -1,0 +1,29 @@
+[
+  {
+    "category": "Vervoer",
+    "question": "Welke autorit is schadelijker voor het milieu?",
+    "answers": [
+      [
+        "Een autorit binnen de bebouwde kom",
+         2
+      ],
+      [
+        "Een rit buiten de bebouwde kom. ",
+         0
+      ]
+    ]
+  },
+  {
+    "category": "Vervoer",
+    "question": "Is het milieuvriendelijker om tijdens dal- of spitsuren te reizen met de trein?",
+    "answers": [ 
+      [
+        "Tijdens daluren", 2
+      ],
+      [
+        "Tijdens de spitsuren", 0
+      ]
+    ]
+  }
+]
+
