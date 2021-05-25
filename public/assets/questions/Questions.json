@@ -5,11 +5,11 @@
     "answers": [
       [
         "Een autorit binnen de bebouwde kom",
-         0
+         2
       ],
       [
         "Een rit buiten de bebouwde kom. ",
-         2
+         0
       ]
     ]
   },
@@ -24,41 +24,6 @@
         "Tijdens de spitsuren", 0
       ]
     ]
-  },
-  {
-    "category": "Vervoer",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "Wat is een schoner vervoersmiddel?",
-    "correct_answer": "Een reguliere (benzine) auto",
-    "incorrect_answers": [
-      "Een benzinescooter",
-      "Een reguliere (benzine) auto"
-    ]
-  },
-  {
-    "category": "Vervoer",
-    "type":"multiple",
-    "difficulty":"easy",
-    "question": "Wanneer reis jij met de fiets?",
-    "answers": ["hele antwoord", "ant2", "ant3"],
-    "hele antwoord": 1
-  }, 
-  {
-    "category":"Vervoer",
-    "type":"multiple",
-    "difficulty":"",
-    "question": "",
-    "correct_answer": "",
-    "incorrect_answers": []
-  },
-  {
-    "category":"Vervoer",
-    "type":"multiple",
-    "difficulty":"",
-    "question": "",
-    "correct_answer": "",
-    "incorrect_answers": []
-  }     
+  }
 ]
 

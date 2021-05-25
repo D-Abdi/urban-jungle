@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
 import QuizUI from '../components/presentational/QuizUI/QuizUI';

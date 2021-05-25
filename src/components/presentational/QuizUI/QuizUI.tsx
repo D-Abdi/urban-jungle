@@ -13,22 +13,21 @@ const QuizUI: React.FC = () => {
     const [answers, setAnswers] = useState(null);
     
     function chooseAnswer(answer) {
-        console.log("Choose answer: " + answer[0]);
-        setScore(score + answer[1])
-        console.log(score);
+        setScore((prevScore) => prevScore + answer[1])
         setQuestionNr(questionNr+1)
         setQA(questionNr)
     }
 
     function setQA (number){
-        if(items !== null){
-            setQuestion(items[number].question)
-            setAnswers(items[number].answers)
-        }
+        setQuestion(items[number].question)
+        setAnswers(items[number].answers)
     }
     
     React.useEffect(()=>{
-        setQA(0)
+        if(items !== null){
+            setTotalQuestions(items.length)
+            setQA(0)
+        }
     },[items])
 
     React.useEffect(() => {
