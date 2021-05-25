@@ -7,8 +7,7 @@ import { Link, Redirect, useHistory } from 'react-router-dom'
 import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
 import { cameraOutline } from 'ionicons/icons';
 import { drawRect }  from '../components/functional/drawRect/drawRect';
- 
-import ExploreContainer from '../components/presentational/ExploreContainer/ExploreContainer'; 
+
 import './Tab1.css';
 import { type } from 'node:os';
 
