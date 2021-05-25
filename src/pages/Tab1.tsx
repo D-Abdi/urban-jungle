@@ -20,8 +20,14 @@ type Props = {
 }
 
 const videoConstraints = {
-  facingMode: "user"
+  facingMode: "user",
+  width: 350,
+  height: 500
 };
+
+const regularVideo = {
+  facingMode: "user"
+}
 
 const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetectedObject }) => {
   // History
@@ -107,7 +113,7 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
                     muted={true} 
                     id="OD-Webcam"
                     screenshotFormat="image/jpeg"
-                    videoConstraints={videoConstraints}
+                    videoConstraints={window.innerWidth <= 400 ? videoConstraints : regularVideo}
                 />
               </IonCol>
             </IonRow>
