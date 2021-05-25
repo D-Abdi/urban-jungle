@@ -45,7 +45,7 @@ const App: React.FC = () => {
         <IonTabs>
           <IonRouterOutlet>
             <Route exact path="/tab1">
-              <Tab1 webcamRef={webcamRef} canvasRef={canvasRef} />
+              <Tab1 webcamRef={webcamRef} canvasRef={canvasRef} detectedObject={detectedObject} setDetectedObject={setDetectedObject} />
             </Route>
             <Route exact path="/tab2">
               <Tab2 />
