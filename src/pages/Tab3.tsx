@@ -71,7 +71,7 @@ const Tab3: React.FC<Props> = ({score}) => {
             intensity={1} />
           <SkyBox />
         </Canvas>
-        <ResultsBox category={category} points={points} />
+        <ResultsBox category={category} points={score} />
       </IonContent>
     </IonPage>
   );
