@@ -23,7 +23,7 @@ const Tab3: React.FC<Props> = ({score}) => {
   // Load models based on the quiz score 
   // Change number to change the amount of points needed for the other model
   let model;
-  if (score < 12) { 
+  if (score < 30) { 
     model = <TestCity position={[0,0,0]} />;
   } else {
     model = <TutorialDonut position={[0,0,0]} scale={[20,20,20]} />;
