@@ -10,19 +10,24 @@ import TutorialDonut from '../components/presentational/tsxModels/TutorialDonut'
 import TestCity from '../components/presentational/tsxModels/TestCity';
 import { CubeTextureLoader } from 'three';
 
-const Tab3: React.FC = () => {
+type Props = {
+  score: number
+}
 
+const Tab3: React.FC<Props> = ({score}) => {
   // This needs to be changed to the value recieved from the quiz
   let categories = ["vervoer", "voedsel", "afval"]
   let randomNumber = Math.floor(Math.random()*3)
   let category = categories[randomNumber];
 
-  // Load models conditionaly
-  let points = Math.floor(Math.random()*21);
-  let model = <TutorialDonut position={[0,0,0]} scale={[20,20,20]} />;
-  if (points < 11) {
-    model = <TestCity position={[0,0,0]} castShadow receiveShadow />;
-  } 
+  // Load models based on the quiz score 
+  // Change number to change the amount of points needed for the other model
+  let model;
+  if (score < 12) { 
+    model = <TestCity position={[0,0,0]} />;
+  } else {
+    model = <TutorialDonut position={[0,0,0]} scale={[20,20,20]} />;
+  }
 
   // Loads the skybox texture and applies it to the scene.
   function SkyBox() {
@@ -66,7 +71,7 @@ const Tab3: React.FC = () => {
             intensity={1} />
           <SkyBox />
         </Canvas>
-        <ResultsBox category={category} points={points} />
+        <ResultsBox category={category} points={score} />
       </IonContent>
     </IonPage>
   );
