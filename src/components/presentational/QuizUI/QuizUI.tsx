@@ -3,6 +3,7 @@ import * as React from 'react';
 import { useState } from 'react';
 
 import axios from 'axios';
+import { Redirect } from 'react-router';
 
 const QuizUI: React.FC = () => {
     const [score, setScore] = useState(0);
@@ -15,7 +16,9 @@ const QuizUI: React.FC = () => {
     function chooseAnswer(answer) {
         setScore((prevScore) => prevScore + answer[1])
         setQuestionNr(questionNr+1)
-        setQA(questionNr)
+        if(questionNr+1 <= totalQuestions){
+            setQA(questionNr)
+        }
     }
 
     function setQA (number){
@@ -39,21 +42,25 @@ const QuizUI: React.FC = () => {
             )
     }, [])
     if(answers && answers !== null){
-        return(
-            <div className="question">
-                <IonCardSubtitle>
-                    Question: {questionNr} / {totalQuestions}
-                </IonCardSubtitle>
-                <p>{question}</p>
-                <div>
-                    {answers.map((answer, index) => (
-                        <div key={index} className="answer" onClick={(e) => chooseAnswer(answer)}>
-                            {answer[0]}
-                        </div>
-                    ))}
+        if(questionNr > totalQuestions){
+            return <Redirect to="/tab3"/>
+        }else{
+            return(
+                <div className="question">
+                    <IonCardSubtitle>
+                        Question: {questionNr} / {totalQuestions}
+                    </IonCardSubtitle>
+                    <p>{question}</p>
+                    <div>
+                        {answers.map((answer, index) => (
+                            <div key={index} className="answer" onClick={(e) => chooseAnswer(answer)}>
+                                {answer[0]}
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }  
     }else {
         return <p>Aan het laden... </p>
     }
