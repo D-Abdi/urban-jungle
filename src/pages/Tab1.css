@@ -1,5 +1,6 @@
 #OD-Webcam {
   position: absolute;
+  display: flex;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -9,7 +10,8 @@
 }
 
 #OD-Canvas {
-  position: absolute;
+  position: relative;
+  display: flex;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -26,4 +28,17 @@
   text-align: center;
   z-index: 5;
   height: 500px;
+}
+
+#cameraOutline {
+  height: 100px;
+}
+
+.snap-a-pic {
+  position: relative;
+  display: flex;
+  z-index: 50;
+  margin: 0 auto;
+  width: 250px;
+  height: 50px;
 }

@@ -31,6 +31,6 @@ export const fetchQuizQuestions = async (amount: number, difficulty: Difficulty)
         answers: shuffleArray([
             ...question.incorrect_answers,
             question.correct_answer
-        ])
+        ]) 
     }))
 }

@@ -4,7 +4,8 @@ import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
 import { Link, Redirect } from 'react-router-dom'
 
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
+import { cameraOutline } from 'ionicons/icons';
 import { drawRect }  from '../components/functional/drawRect/drawRect';
  
 import ExploreContainer from '../components/presentational/ExploreContainer/ExploreContainer'; 
@@ -94,21 +95,34 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef }) => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <Webcam
-            ref={webcamRef}
-            muted={true} 
-            id="OD-Webcam"
-            screenshotFormat="image/jpeg"
-            videoConstraints={videoConstraints}
-          />
-
-        <canvas
-            ref={canvasRef}
-            id="OD-Canvas"
-          />
-        
-        <IonButton onClick={stop}>Snap a pic</IonButton>
+        <IonGrid>
+            <IonRow>
+              <IonCol>
+                <Webcam
+                    ref={webcamRef}
+                    muted={true} 
+                    id="OD-Webcam"
+                    screenshotFormat="image/jpeg"
+                    videoConstraints={videoConstraints}
+                />
+              </IonCol>
+            </IonRow>
+            
+            <IonRow>
+            <IonCol>
+              <canvas
+                  ref={canvasRef}
+                  id="OD-Canvas"
+                />
+              </IonCol>
+            </IonRow>
           
+            <IonRow>
+              <IonCol>
+              <IonButton onClick={stop} className="snap-a-pic">Take A Picture!<IonIcon icon={cameraOutline} id="cameraOutline" /></IonButton>
+              </IonCol>
+            </IonRow>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );
