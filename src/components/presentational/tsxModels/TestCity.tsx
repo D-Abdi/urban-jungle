@@ -61,18 +61,13 @@ type GLTFResult = GLTF & {
   }
 }
 
-export default function Model(props: JSX.IntrinsicElements['group']) {
+export default function TestCity(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>()
+
   const { nodes, materials } = useGLTF('assets/models/testCity.glb') as GLTFResult
 
   function displayInfo() {
     alert("Dit gebouw is roze! Hier kan je op den duur lezen over de duurzaamheid van dit object..")
-  }
-
-  const [waterHeight, setWaterHeight] = useState(0.41)
-
-  function raiseWater() {
-    setWaterHeight(waterHeight + 0.5)
   }
 
   return (
@@ -318,10 +313,8 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
       <mesh
         geometry={nodes.Water.geometry}
         material={materials.Water}
-        position={[3.84, -8.81 + waterHeight, 7.69]}
-        scale={[123, waterHeight, 123]}
-        // onPointerUp instead of onClick for mobile support
-        onPointerUp={ raiseWater }
+        position={[3.84, -8.81, 7.69]}
+        scale={[123, 0.41, 123]}
       />
     </group>
   )
