@@ -38,7 +38,7 @@ const QuizUI: React.FC<Props> = ({setScore}) => {
     },[items])
 
     React.useEffect(() => {
-        axios.get("/assets/questions/Questions.json")
+        axios.get("assets/questions/Questions.json")
             .then(
                 res => {
                     setItems(res.data); 
