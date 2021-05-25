@@ -38,6 +38,7 @@ const App: React.FC = () => {
   let webcamRef = useRef(null)
   let canvasRef = useRef(null);
   let [detectedObject, setDetectedObject] = useState('')
+  let [score, setScore] = useState(0);
 
   return (
     <IonApp>
@@ -45,10 +46,10 @@ const App: React.FC = () => {
         <IonTabs>
           <IonRouterOutlet>
             <Route exact path="/tab1">
-              <Tab1 webcamRef={webcamRef} canvasRef={canvasRef} />
+              <Tab1 webcamRef={webcamRef} canvasRef={canvasRef} detectedObject={detectedObject} setDetectedObject={setDetectedObject} />
             </Route>
             <Route exact path="/tab2">
-              <Tab2 />
+              <Tab2 setScore={setScore}/>
             </Route>
             <Route path="/tab3">
               <Tab3 />
