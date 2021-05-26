@@ -1,9 +1,11 @@
-import { IonCardSubtitle } from '@ionic/react';
+import { IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonContent } from '@ionic/react';
 import * as React from 'react';
 import { useState } from 'react';
 
 import axios from 'axios';
 import { Redirect } from 'react-router';
+
+import './QuizUI.css'
 
 type Props = {
     setScore: any;
@@ -50,19 +52,19 @@ const QuizUI: React.FC<Props> = ({setScore}) => {
             return <Redirect to="/tab3"/>
         }else{
             return(
-                <div className="question">
+                <IonCard className="question">
                     <IonCardSubtitle>
                         Question: {questionNr} / {totalQuestions}
                     </IonCardSubtitle>
-                    <p>{question}</p>
-                    <div>
+                    <IonCardTitle>{question}</IonCardTitle>
+                    <IonCardContent>
                         {answers.map((answer, index) => (
-                            <div key={index} className="answer" onClick={(e) => chooseAnswer(answer)}>
-                                {answer[0]}
-                            </div>
+                            <IonCard key={index} className="answer" onClick={(e) => chooseAnswer(answer)}>
+                                <IonCardContent> {answer[0]} </IonCardContent>
+                            </IonCard>
                         ))}
-                    </div>
-                </div>
+                    </IonCardContent>
+                </IonCard>
             )
         }  
     }else {
