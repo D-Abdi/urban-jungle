@@ -9,9 +9,10 @@ import './QuizUI.css'
 
 type Props = {
     setScore: any;
+    detectedObject: any;
 }
 
-const QuizUI: React.FC<Props> = ({setScore}) => {
+const QuizUI: React.FC<Props> = ({setScore, detectedObject}) => {
     
     const [items, setItems] = useState(null);
     const [questionNr, setQuestionNr] = useState(1);
@@ -39,11 +40,60 @@ const QuizUI: React.FC<Props> = ({setScore}) => {
         }
     },[items])
 
+    // Classes object recognition can see: https://github.com/tensorflow/tfjs-models/blob/master/coco-ssd/src/classes.ts
+    let vervoerArray = [
+        'bicycle',
+        'car',
+        'motorcycle',
+        'airplane',
+        'bus',
+        'train',
+        'truck',
+        'boat',
+        'traffic light',
+        'stop sign',
+        'parking meter'
+    ]
+    
+    let voedselArray = [
+        'bottle',
+        'wine glass',
+        'cup',
+        'fork',
+        'knife',
+        'spoon',
+        'bowl',
+        'banana',
+        'apple',
+        'sandwich',
+        'orange',
+        'broccoli',
+        'carrot',
+        'hot dog',
+        'pizza',
+        'donut',
+        'cake',
+        'dining table',
+        'microwave',
+        'oven',
+        'toaster',
+        'sink',
+        'refridgerator'
+    ]
+
     React.useEffect(() => {
         axios.get("assets/questions/Questions.json")
             .then(
                 res => {
-                    setItems(res.data); 
+                    // Add objects that objectdetection can recognize
+                    if (voedselArray.includes(detectedObject)) {
+                        setItems(res.data.voedsel); 
+                    } else if (vervoerArray.includes(detectedObject)) {
+                        setItems(res.data.vervoer)
+                    } else {
+                        setItems(res.data.overig)
+                    }
+                    
                 }
             )
     }, [])

@@ -49,7 +49,7 @@ const App: React.FC = () => {
               <Tab1 webcamRef={webcamRef} canvasRef={canvasRef} detectedObject={detectedObject} setDetectedObject={setDetectedObject} />
             </Route>
             <Route exact path="/tab2">
-              <Tab2 setScore={setScore} />
+              <Tab2 setScore={setScore} detectedObject={detectedObject} />
             </Route>
             <Route path="/tab3">
               <Tab3 score={score} />
