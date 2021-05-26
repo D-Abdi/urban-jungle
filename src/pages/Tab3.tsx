@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab3.css';
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import ResultsBox from '../components/presentational/ResultsBox/ResultsBox';
@@ -12,14 +12,57 @@ import TestCityRed from '../components/presentational/tsxModels/TestCityRed';
 import { CubeTextureLoader } from 'three';
 
 type Props = {
-  score: number
+  score: number;
+  detectedObject: any;
 }
 
-const Tab3: React.FC<Props> = ({score}) => {
+const Tab3: React.FC<Props> = ({score, detectedObject}) => {
   // This needs to be changed to the value recieved from the quiz
-  let categories = ["vervoer", "voedsel", "afval"]
-  let randomNumber = Math.floor(Math.random()*3)
-  let category = categories[randomNumber];
+  // Classes object recognition can see: https://github.com/tensorflow/tfjs-models/blob/master/coco-ssd/src/classes.ts
+  let vervoerArray = [
+    'bicycle',
+    'car',
+    'motorcycle',
+    'airplane',
+    'bus',
+    'train',
+    'truck',
+    'boat',
+    'traffic light',
+    'stop sign',
+    'parking meter'
+  ]
+  let voedselArray = [
+    'bottle',
+    'wine glass',
+    'cup',
+    'fork',
+    'knife',
+    'spoon',
+    'bowl',
+    'banana',
+    'apple',
+    'sandwich',
+    'orange',
+    'broccoli',
+    'carrot',
+    'hot dog',
+    'pizza',
+    'donut',
+    'cake',
+    'dining table',
+    'microwave',
+    'oven',
+    'toaster',
+    'sink',
+    'refridgerator'
+  ]
+  let category = 'overig'
+  if (voedselArray.includes(detectedObject)) {
+    category = 'voedsel'
+  } else if (vervoerArray.includes(detectedObject)){
+    category = 'vervoer'
+  }
 
   // Load models based on the quiz score 
   // Change number to change the amount of points needed for the other model

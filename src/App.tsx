@@ -52,7 +52,7 @@ const App: React.FC = () => {
               <Tab2 setScore={setScore} detectedObject={detectedObject} />
             </Route>
             <Route path="/tab3">
-              <Tab3 score={score} />
+              <Tab3 score={score} detectedObject={detectedObject} />
             </Route>
             <Route exact path="/">
               <Redirect to="/tab1" />
