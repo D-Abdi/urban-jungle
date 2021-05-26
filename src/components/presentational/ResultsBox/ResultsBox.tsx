@@ -2,9 +2,10 @@ import { IonButton, IonCol, IonContent, IonItem, IonLabel, IonList, IonModal, Io
 import * as React from 'react';
 import { useState } from 'react';
 import './ResultsBox.css';
+import { useHistory } from 'react-router-dom'
 
 type Props = {
-    category : string;
+    category : any;
     points : number;
 }
 
@@ -26,7 +27,7 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
             "Roadkills kan je ook eten.",
             "Hoe proeft pinguin?"
         ]
-    } else if (category == "afval") {
+    } else if (category == "overig") {
         tips = [
             "Afval moet je niet eten.",
             "Scheid je afval.",
@@ -48,6 +49,14 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
     );
 
     const [showModal, setShowModal] = useState(false);
+
+    let history = useHistory();
+    function redirectHome() {
+        // Close modal
+        setShowModal(false)
+        // Go to homepage
+        history.push('/tab0')
+    }
 
     return (
         <div className="modalContainer">
@@ -78,6 +87,9 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
                         <IonCol></IonCol>
                         <IonCol>
                             <IonButton onClick={() => setShowModal(false)} className="ion-align-self-center closeModalButton" size="large">Sluiten</IonButton>
+                        </IonCol>
+                        <IonCol>
+                            <IonButton onClick={redirectHome} className="ion-align-self-center closeModalButton" size="large">Home</IonButton>
                         </IonCol>
                         <IonCol></IonCol>
                     </IonRow>
