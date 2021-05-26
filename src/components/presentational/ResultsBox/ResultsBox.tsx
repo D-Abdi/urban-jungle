@@ -4,7 +4,7 @@ import { useState } from 'react';
 import './ResultsBox.css';
 
 type Props = {
-    category : string;
+    category : any;
     points : number;
 }
 
@@ -26,7 +26,7 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
             "Roadkills kan je ook eten.",
             "Hoe proeft pinguin?"
         ]
-    } else if (category == "afval") {
+    } else if (category == "overig") {
         tips = [
             "Afval moet je niet eten.",
             "Scheid je afval.",
