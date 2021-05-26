@@ -2,6 +2,7 @@ import { IonButton, IonCol, IonContent, IonItem, IonLabel, IonList, IonModal, Io
 import * as React from 'react';
 import { useState } from 'react';
 import './ResultsBox.css';
+import { useHistory } from 'react-router-dom'
 
 type Props = {
     category : any;
@@ -49,6 +50,14 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
 
     const [showModal, setShowModal] = useState(false);
 
+    let history = useHistory();
+    function redirectHome() {
+        // Close modal
+        setShowModal(false)
+        // Go to homepage
+        history.push('/tab0')
+    }
+
     return (
         <div className="modalContainer">
             <IonModal isOpen={showModal} backdropDismiss={false} cssClass='tipsModal'>
@@ -78,6 +87,9 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
                         <IonCol></IonCol>
                         <IonCol>
                             <IonButton onClick={() => setShowModal(false)} className="ion-align-self-center closeModalButton" size="large">Sluiten</IonButton>
+                        </IonCol>
+                        <IonCol>
+                            <IonButton onClick={redirectHome} className="ion-align-self-center closeModalButton" size="large">Home</IonButton>
                         </IonCol>
                         <IonCol></IonCol>
                     </IonRow>
