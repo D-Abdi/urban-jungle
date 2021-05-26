@@ -1,4 +1,4 @@
-import { IonButton, IonCol, IonContent, IonItem, IonLabel, IonList, IonModal, IonRow, IonThumbnail } from '@ionic/react';
+import { IonButton, IonCol, IonContent, IonItem, IonLabel, IonList, IonModal, IonRow, IonThumbnail, IonTitle } from '@ionic/react';
 import * as React from 'react';
 import { useState } from 'react';
 import './ResultsBox.css';
@@ -69,7 +69,7 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
                                 <IonThumbnail slot="start">
                                     <img src="./assets/icon/plantIcon.jpg" />
                                 </IonThumbnail>
-                                <IonLabel className="ion-text-wrap">Jij hebt {points} duurzaamheidspunten!</IonLabel>
+                                <IonTitle className="ion-text-wrap">Jij hebt {points}/45 duurzaamheidspunten!</IonTitle>
                             </IonItem>
                         </IonCol>
                         <IonCol></IonCol>

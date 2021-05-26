@@ -249,6 +249,23 @@
           "Gangbare producten (waarbij bijvoorbeeld kunstmest gebruikt wordt)", 0
         ]
       ]
+    },
+    {
+      "question": "Hoe vaak per week eet je vis?",
+      "answers":[
+        [
+          "Nooit", 0
+        ],
+        [
+          "1 of 2 keer per week", 2
+        ],
+        [
+          "3 tot 5 keer per week", 4
+        ],
+        [
+          "Meer dan 5 keer per week", 5
+        ]
+      ]
     }
   ],
   "afval": [
