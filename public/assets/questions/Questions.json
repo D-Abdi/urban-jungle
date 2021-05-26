@@ -4,12 +4,10 @@
       "question": "Welke autorit is schadelijker voor het milieu?",
       "answers": [
         [
-          "Een autorit binnen de bebouwde kom",
-           5
+          "Een autorit binnen de bebouwde kom", 5
         ],
         [
-          "Een rit buiten de bebouwde kom. ",
-           0
+          "Een rit buiten de bebouwde kom. ", 0
         ]
       ]
     },
@@ -137,110 +135,124 @@
   ],
   "voedsel": [
     {
-      "question": "VOEDSEL Welke autorit is schadelijker voor het milieu?",
+      "question": "Wat is beter om als mens te zijn?",
       "answers": [
         [
-          "Een autorit binnen de bebouwde kom",
-           5
+          "Vegetariër", 0
         ],
         [
-          "Een rit buiten de bebouwde kom. ",
-           0
+          "Flexitariër", 5
         ]
       ]
     },
     {
-      "question": "VOEDSEL Is het milieuvriendelijker om tijdens dal- of spitsuren te reizen met de trein?",
+      "question": "Wat is beter voor het millieu om te kweken?",
       "answers": [ 
         [
-          "Tijdens daluren", 5
+          "Vlees", 0
         ],
         [
-          "Tijdens de spitsuren", 0
+          "Vis", 5
         ]
       ]
     },
     {
-      "question": "VOEDSEL Wat is een schoner vervoersmiddel?",
+      "question": "Hoeveel keer per week eet je vegetarisch?",
       "answers":[
         [
-          "Een benzinescooter", 0
+          "Nooit", 0
         ],
         [
-          "Een reguliere auto", 5
+          "1 of 2 keer per week", 2
+        ],
+        [
+          "3 tot 5 keer per week", 4
+        ],
+        [
+          "Meer dan 5 keer per week", 5
         ]
     ]
     },
     {
-      "question": "VOEDSEL Wanneer reis jij met de fiets?",
+      "question": "Van welk vee wordt het meeste vlees gebruikt?",
       "answers":[
         [ 
-          "Elke dag, bijvoorbeeld om ermee naar school te gaan.", 5
+          "De koe", 0
         ],
         [
-          "2 tot 3 keer per week", 3
+          "Het varken", 5
         ],
         [
-          "Minder dan 2 keer per week", 1
+          "De kip", 0
+        ],
+        [
+          "Het schaap", 0
+        ]
+      ]
+    },
+    {
+      "question": "Welk vee is het beste om te kweken?",
+      "answers":[
+        [
+          "Koeien", 5
+        ],
+        [
+          "Varkens", 0
+        ],
+        [
+          "Kippen", 0
+        ],
+        [
+          "Schapen", 0
+        ]
+      ]
+    },
+    {
+      "question": "Hoe vaak koop je biologische producten?",
+      "answers":[
+        [ 
+          "Altijd als die keuze er is", 5
+        ],
+        [
+          "Alleen bij groenten", 2
+        ],
+        [ 
+          "Alleen bij vlees", 2
         ],
         [
           "Nooit", 0
-        ]
-      ]
-    },
-    {
-      "question": "VOEDSEL Wat is de minst milieuvriendelijke manier van reizen?",
-      "answers":[
-        [
-          "Vliegtuig", 0
-        ],
-        [
-          "Auto", 2
-        ],
-        [
-          "Bus", 3
-        ],
-        [
-          "Fiets", 5
-        ]
-      ]
-    },
-    {
-      "question": "VOEDSEL Hoe vaak ga jij op vliegvakantie?",
-      "answers":[
-        [ 
-          "1 tot 2 keer per jaar", 2
-        ],
-        [
-          "3 tot 5 keer per jaar", 1
-        ],
-        [ 
-          "Vaker dan 5 keer per jaar", 0
-        ],
-        [
-          "Nooit", 5
         ]
   
       ]
     },
     {
-      "question": "VOEDSEL Heb je een elektrisch voertuig?",
+      "question": "Wanneer is iets biologisch verbouwd?",
       "answers":[
         [
-          "Ja, een elektrische fiets of scooter", 3
+          "Als het in een kas is verbouwd", 0
         ],
         [
-          "Ja, een elektrische auto", 5
+          "Als het buiten is verbouwd", 0
         ],
         [
-          "Nee al mijn vervoersmiddelen maken gebruik van fossiele brandstoffen", 0
-        ],
-        [
-          "Nee ik maak gebruik van het OV of mijn fiets", 5
+          "Als het is verbouwd zonder mest, syntetische producten, of bestrijdingsmiddelen", 5
         ]
       ]
     },{
-      "question": "VOEDSEL Welk vervoersmiddel gebruik je het meest?",
+      "question": "Wat is beter voor het millieu?",
+      "answers":[
+        [ 
+          "Biologische producten", 5
+        ],
+        [
+          "Gangbare producten (waarbij bijvoorbeeld kunstmest gebruikt wordt)", 0
+        ]
+      ]
+    }
+  ],
+  "overig": [
+    {
+      "question": "OVERIG Welk vervoersmiddel gebruik je het meest?",
       "answers":[
         [ 
           "De auto", 0
@@ -254,7 +266,7 @@
       ]
     },
     {
-      "question": "VOEDSEL Hoe vaak zit u alleen in de auto?",
+      "question": "OVERIG Hoe vaak zit u alleen in de auto?",
       "answers":[
         [ 
           "Altijd", 0
@@ -269,9 +281,7 @@
           "Ik heb geen auto, dus ik rijd altijd mee", 5
         ]
       ]
-    }
-  ],
-  "overig": [
+    },
     {
       "question": "OVERIG Welk vervoersmiddel gebruik je het meest?",
       "answers":[
