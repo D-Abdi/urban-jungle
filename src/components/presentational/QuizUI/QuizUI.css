@@ -1,0 +1,12 @@
+.question{
+    padding: 20px;
+}
+
+ion-card ion-card:hover{
+    cursor: pointer;
+    filter: brightness(150%);
+}
+
+ion-card ion-card{
+    border: solid 1px darkslategrey;
+}
