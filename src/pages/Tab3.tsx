@@ -8,6 +8,7 @@ import ResultsBox from '../components/presentational/ResultsBox/ResultsBox';
 // Import TSX files of the models
 import TutorialDonut from '../components/presentational/tsxModels/TutorialDonut';
 import TestCity from '../components/presentational/tsxModels/TestCity';
+import TestCityRed from '../components/presentational/tsxModels/TestCityRed';
 import { CubeTextureLoader } from 'three';
 
 type Props = {
@@ -23,10 +24,10 @@ const Tab3: React.FC<Props> = ({score}) => {
   // Load models based on the quiz score 
   // Change number to change the amount of points needed for the other model
   let model;
-  if (score < 30) { 
-    model = <TestCity position={[0,0,0]} />;
+  if (score < 25) { 
+    model = <TestCityRed position={[0,0,0]} />;
   } else {
-    model = <TutorialDonut position={[0,0,0]} scale={[20,20,20]} />;
+    model = <TestCity position={[0,0,0]} />;
   }
 
   // Loads the skybox texture and applies it to the scene.
