@@ -17,7 +17,7 @@ type Props = {
 }
 
 const videoConstraints = {
-  facingMode: "user",
+  facingMode: "environment",
   width: 350,
   height: 500
 };
