@@ -53,10 +53,8 @@ const QuizUI: React.FC<Props> = ({setScore, detectedObject}) => {
         'traffic light',
         'stop sign',
         'parking meter'
-    ]
-    
+    ]  
     let voedselArray = [
-        'bottle',
         'wine glass',
         'cup',
         'fork',
@@ -77,8 +75,14 @@ const QuizUI: React.FC<Props> = ({setScore, detectedObject}) => {
         'microwave',
         'oven',
         'toaster',
-        'sink',
         'refridgerator'
+    ]
+    let afvalArray = [
+        'bottle',
+        'sink',
+        'backpack',
+        'handbag',
+        'toilet'
     ]
 
     React.useEffect(() => {
@@ -90,6 +94,8 @@ const QuizUI: React.FC<Props> = ({setScore, detectedObject}) => {
                         setItems(res.data.voedsel); 
                     } else if (vervoerArray.includes(detectedObject)) {
                         setItems(res.data.vervoer)
+                    } else if (afvalArray.includes(detectedObject)) {
+                        setItems(res.data.afval)
                     } else {
                         setItems(res.data.overig)
                     }

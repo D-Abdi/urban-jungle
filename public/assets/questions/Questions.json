@@ -191,7 +191,7 @@
       ]
     },
     {
-      "question": "Welk vee is het beste om te kweken?",
+      "question": "Welk vee is het beste om te fokken?",
       "answers":[
         [
           "Koeien", 5
@@ -238,7 +238,8 @@
           "Als het is verbouwd zonder mest, syntetische producten, of bestrijdingsmiddelen", 5
         ]
       ]
-    },{
+    },
+    {
       "question": "Wat is beter voor het millieu?",
       "answers":[
         [ 
@@ -246,6 +247,36 @@
         ],
         [
           "Gangbare producten (waarbij bijvoorbeeld kunstmest gebruikt wordt)", 0
+        ]
+      ]
+    }
+  ],
+  "afval": [
+    {
+      "question": "AFVAL Welk vervoersmiddel gebruik je het meest?",
+      "answers":[
+        [ 
+          "De auto", 0
+        ],
+        [
+          "Het ov", 4
+        ],
+        [ 
+          "De fiets", 5
+        ]
+      ]
+    },
+    {
+      "question": "AFVAL Welk vervoersmiddel gebruik je het meest?",
+      "answers":[
+        [ 
+          "De auto", 0
+        ],
+        [
+          "Het ov", 4
+        ],
+        [ 
+          "De fiets", 5
         ]
       ]
     }
