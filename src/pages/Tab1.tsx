@@ -1,16 +1,13 @@
-import React, { useRef, useEffect, useCallback, useState } from 'react';
-import * as tf from "@tensorflow/tfjs";
+import React, { useEffect } from 'react';
 import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
-import { Link, Redirect, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
 import { cameraOutline } from 'ionicons/icons';
 import { drawRect }  from '../components/functional/drawRect/drawRect';
- 
-import ExploreContainer from '../components/presentational/ExploreContainer/ExploreContainer'; 
+
 import './Tab1.css';
-import { type } from 'node:os';
 
 type Props = {
   webcamRef: any;
@@ -38,9 +35,9 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
     const net : any = await cocossd.load();
     
     //  Loop and detect hands 
-      setInterval(() => {
-        detect(net);
-      }, 10);
+    setInterval(() => {
+      detect(net);
+    }, 10);
 
   };
 
@@ -74,9 +71,7 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
         setDetectedObject(obj[0].class)
       } else return 
 
-      console.log(obj[0].class)
-      
-
+      // console.log(obj[0].class)
     }
   };
 
@@ -94,7 +89,7 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
     webcamRef.current.video.srcObject = null;
     console.log(detectedObject)  
     
-    history.push('/Tab2')
+    history.push('/tab2')
   }
 
   return (

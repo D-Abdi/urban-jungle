@@ -85,7 +85,7 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         scale={[4.1, 8.2, 4.1]}
         // onPointerUp instead of onClick for mobile support
         onPointerUp={ displayInfo }
-      >
+        >
         <meshStandardMaterial color="hotpink" />
       </mesh>
       <mesh
@@ -93,7 +93,9 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={nodes.Building2.material}
         position={[20.24, -0.2, -8.71]}
         scale={[4.1, 4.1, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <group position={[-28.96, 8, -33.31]} scale={[4.1, 12.3, 4.1]}>
         <mesh geometry={nodes.Cube003.geometry} material={nodes.Cube003.material} />
         <mesh geometry={nodes.Cube003_1.geometry} material={nodes.Cube003_1.material} />
@@ -103,7 +105,9 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={nodes.Building4.material}
         position={[3.84, 3.9, 40.49]}
         scale={[12.3, 8.2, 12.3]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <group position={[3.84, 3.9, 14.87]} scale={[4.1, 8.2, 3.07]}>
         <mesh geometry={nodes.Cube006.geometry} material={nodes.Cube006.material} />
         <mesh geometry={nodes.Cube006_1.geometry} material={nodes.Cube006_1.material} />
@@ -113,43 +117,57 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={nodes.Building6.material}
         position={[12.04, 8, -8.71]}
         scale={[4.1, 12.3, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building7.geometry}
         material={nodes.Building7.material}
         position={[20.24, 8, 11.79]}
         scale={[4.1, 12.3, 8.2]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building8.geometry}
         material={nodes.Building8.material}
         position={[20.24, 8, 32.29]}
         scale={[4.1, 12.3, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building9.geometry}
         material={nodes.Building9.material}
         position={[32.54, -0.2, 15.89]}
         scale={[8.2, 4.1, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building11.geometry}
         material={nodes.Building11.material}
         position={[-12.56, 8, -8.71]}
         scale={[4.1, 12.3, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building12.geometry}
         material={nodes.Building12.material}
         position={[28.44, 12.1, 7.69]}
         scale={[4.1, 16.4, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building13.geometry}
         material={nodes.Building13.material}
         position={[3.84, -0.2, 56.89]}
         scale={[8.2, 4.1, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <group position={[-20.76, 3.9, 15.89]} scale={[12.3, 8.2, 4.1]}>
         <mesh geometry={nodes.Cube015.geometry} material={nodes.Cube015.material} />
         <mesh geometry={nodes.Cube015_1.geometry} material={nodes.Cube015_1.material} />
@@ -159,7 +177,9 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={nodes.Building10.material}
         position={[36.64, 5.95, -0.51]}
         scale={[4.1, 10.25, 12.3]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building15.geometry}
         material={nodes.Building15.material}
@@ -183,7 +203,9 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={nodes.Building18.material}
         position={[-12.56, 10.05, -16.91]}
         scale={[4.1, 14.35, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building19.geometry}
         material={nodes.Building19.material}
@@ -219,7 +241,9 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={nodes.Building27.material}
         position={[32.54, 1.85, -21.01]}
         scale={[8.2, 6.15, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building26.geometry}
         material={nodes.Building26.material}
@@ -243,7 +267,9 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={nodes.Building31.material}
         position={[-41.26, -4.3, -37.41]}
         scale={[8.2, 1.02, 8.2]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building30.geometry}
         material={nodes.Building30.material}
@@ -261,13 +287,17 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={nodes.Building28.material}
         position={[28.44, 2.88, -41.51]}
         scale={[4.1, 7.17, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building33.geometry}
         material={nodes.Building33.material}
         position={[-45.36, -0.2, 24.09]}
         scale={[4.1, 4.1, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building32.geometry}
         material={nodes.Building32.material}
@@ -303,7 +333,9 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={nodes.Building34.material}
         position={[-4.36, -2.25, -45.61]}
         scale={[8.2, 2.05, 4.1]}
-      />
+        >
+        <meshStandardMaterial color="orange" />
+      </mesh>
       <mesh
         geometry={nodes.Building39.geometry}
         material={nodes.Building39.material}
@@ -315,7 +347,9 @@ export default function TestCity(props: JSX.IntrinsicElements['group']) {
         material={materials.Water}
         position={[3.84, -8.81, 7.69]}
         scale={[123, 0.41, 123]}
-      />
+        >
+        <meshStandardMaterial color="darkgreen" />
+      </mesh>
     </group>
   )
 }

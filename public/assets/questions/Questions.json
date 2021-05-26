@@ -1,0 +1,307 @@
+{
+  "vervoer": [
+    {
+      "question": "Welke autorit is schadelijker voor het milieu?",
+      "answers": [
+        [
+          "Een autorit binnen de bebouwde kom",
+           5
+        ],
+        [
+          "Een rit buiten de bebouwde kom. ",
+           0
+        ]
+      ]
+    },
+    {
+      "question": "Is het milieuvriendelijker om tijdens dal- of spitsuren te reizen met de trein?",
+      "answers": [ 
+        [
+          "Tijdens daluren", 5
+        ],
+        [
+          "Tijdens de spitsuren", 0
+        ]
+      ]
+    },
+    {
+      "question": "Wat is een schoner vervoersmiddel?",
+      "answers":[
+        [
+          "Een benzinescooter", 0
+        ],
+        [
+          "Een reguliere auto", 5
+        ]
+    ]
+    },
+    {
+      "question": "Wanneer reis jij met de fiets?",
+      "answers":[
+        [ 
+          "Elke dag, bijvoorbeeld om ermee naar school te gaan.", 5
+        ],
+        [
+          "2 tot 3 keer per week", 3
+        ],
+        [
+          "Minder dan 2 keer per week", 1
+        ],
+        [
+          "Nooit", 0
+        ]
+      ]
+    },
+    {
+      "question": "Wat is de minst milieuvriendelijke manier van reizen?",
+      "answers":[
+        [
+          "Vliegtuig", 0
+        ],
+        [
+          "Auto", 2
+        ],
+        [
+          "Bus", 3
+        ],
+        [
+          "Fiets", 5
+        ]
+      ]
+    },
+    {
+      "question": "Hoe vaak ga jij op vliegvakantie?",
+      "answers":[
+        [ 
+          "1 tot 2 keer per jaar", 2
+        ],
+        [
+          "3 tot 5 keer per jaar", 1
+        ],
+        [ 
+          "Vaker dan 5 keer per jaar", 0
+        ],
+        [
+          "Nooit", 5
+        ]
+  
+      ]
+    },
+    {
+      "question": "Heb je een elektrisch voertuig?",
+      "answers":[
+        [
+          "Ja, een elektrische fiets of scooter", 3
+        ],
+        [
+          "Ja, een elektrische auto", 5
+        ],
+        [
+          "Nee al mijn vervoersmiddelen maken gebruik van fossiele brandstoffen", 0
+        ],
+        [
+          "Nee ik maak gebruik van het OV of mijn fiets", 5
+        ]
+      ]
+    },{
+      "question": "Welk vervoersmiddel gebruik je het meest?",
+      "answers":[
+        [ 
+          "De auto", 0
+        ],
+        [
+          "Het ov", 4
+        ],
+        [ 
+          "De fiets", 5
+        ]
+      ]
+    },
+    {
+      "question": "Hoe vaak zit u alleen in de auto?",
+      "answers":[
+        [ 
+          "Altijd", 0
+        ],
+        [ 
+          "Soms, ik rijd soms alleen en soms ook samen", 1
+        ],
+        [
+          "Bijna nooit, er rijd altijd wel iemand mee", 3
+        ],
+        [
+          "Ik heb geen auto, dus ik rijd altijd mee", 5
+        ]
+      ]
+    }
+  ],
+  "voedsel": [
+    {
+      "question": "VOEDSEL Welke autorit is schadelijker voor het milieu?",
+      "answers": [
+        [
+          "Een autorit binnen de bebouwde kom",
+           5
+        ],
+        [
+          "Een rit buiten de bebouwde kom. ",
+           0
+        ]
+      ]
+    },
+    {
+      "question": "VOEDSEL Is het milieuvriendelijker om tijdens dal- of spitsuren te reizen met de trein?",
+      "answers": [ 
+        [
+          "Tijdens daluren", 5
+        ],
+        [
+          "Tijdens de spitsuren", 0
+        ]
+      ]
+    },
+    {
+      "question": "VOEDSEL Wat is een schoner vervoersmiddel?",
+      "answers":[
+        [
+          "Een benzinescooter", 0
+        ],
+        [
+          "Een reguliere auto", 5
+        ]
+    ]
+    },
+    {
+      "question": "VOEDSEL Wanneer reis jij met de fiets?",
+      "answers":[
+        [ 
+          "Elke dag, bijvoorbeeld om ermee naar school te gaan.", 5
+        ],
+        [
+          "2 tot 3 keer per week", 3
+        ],
+        [
+          "Minder dan 2 keer per week", 1
+        ],
+        [
+          "Nooit", 0
+        ]
+      ]
+    },
+    {
+      "question": "VOEDSEL Wat is de minst milieuvriendelijke manier van reizen?",
+      "answers":[
+        [
+          "Vliegtuig", 0
+        ],
+        [
+          "Auto", 2
+        ],
+        [
+          "Bus", 3
+        ],
+        [
+          "Fiets", 5
+        ]
+      ]
+    },
+    {
+      "question": "VOEDSEL Hoe vaak ga jij op vliegvakantie?",
+      "answers":[
+        [ 
+          "1 tot 2 keer per jaar", 2
+        ],
+        [
+          "3 tot 5 keer per jaar", 1
+        ],
+        [ 
+          "Vaker dan 5 keer per jaar", 0
+        ],
+        [
+          "Nooit", 5
+        ]
+  
+      ]
+    },
+    {
+      "question": "VOEDSEL Heb je een elektrisch voertuig?",
+      "answers":[
+        [
+          "Ja, een elektrische fiets of scooter", 3
+        ],
+        [
+          "Ja, een elektrische auto", 5
+        ],
+        [
+          "Nee al mijn vervoersmiddelen maken gebruik van fossiele brandstoffen", 0
+        ],
+        [
+          "Nee ik maak gebruik van het OV of mijn fiets", 5
+        ]
+      ]
+    },{
+      "question": "VOEDSEL Welk vervoersmiddel gebruik je het meest?",
+      "answers":[
+        [ 
+          "De auto", 0
+        ],
+        [
+          "Het ov", 4
+        ],
+        [ 
+          "De fiets", 5
+        ]
+      ]
+    },
+    {
+      "question": "VOEDSEL Hoe vaak zit u alleen in de auto?",
+      "answers":[
+        [ 
+          "Altijd", 0
+        ],
+        [ 
+          "Soms, ik rijd soms alleen en soms ook samen", 1
+        ],
+        [
+          "Bijna nooit, er rijd altijd wel iemand mee", 3
+        ],
+        [
+          "Ik heb geen auto, dus ik rijd altijd mee", 5
+        ]
+      ]
+    }
+  ],
+  "overig": [
+    {
+      "question": "OVERIG Welk vervoersmiddel gebruik je het meest?",
+      "answers":[
+        [ 
+          "De auto", 0
+        ],
+        [
+          "Het ov", 4
+        ],
+        [ 
+          "De fiets", 5
+        ]
+      ]
+    },
+    {
+      "question": "OVERIG Hoe vaak zit u alleen in de auto?",
+      "answers":[
+        [ 
+          "Altijd", 0
+        ],
+        [ 
+          "Soms, ik rijd soms alleen en soms ook samen", 1
+        ],
+        [
+          "Bijna nooit, er rijd altijd wel iemand mee", 3
+        ],
+        [
+          "Ik heb geen auto, dus ik rijd altijd mee", 5
+        ]
+      ]
+    }
+  ]
+}

@@ -45,4 +45,4 @@ export default function TutorialDonut(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/assets/models/tutorialDonut.glb')
+useGLTF.preload('assets/models/tutorialDonut.glb')
