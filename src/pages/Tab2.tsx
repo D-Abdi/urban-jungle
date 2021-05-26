@@ -6,9 +6,10 @@ import './Tab2.css';
 
 type Props = {
   setScore: any;
+  detectedObject: any;
 }
 
-const Tab2: React.FC<Props> = ({setScore}) => {
+const Tab2: React.FC<Props> = ({setScore, detectedObject}) => {
 
   return (
     <IonPage>
@@ -18,7 +19,7 @@ const Tab2: React.FC<Props> = ({setScore}) => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <QuizUI setScore = {setScore}/>
+        <QuizUI setScore = {setScore} detectedObject={detectedObject}/>
       </IonContent>
     </IonPage>
   );
