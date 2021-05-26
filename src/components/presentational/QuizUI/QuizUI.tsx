@@ -1,15 +1,18 @@
-import { IonCardSubtitle } from '@ionic/react';
+import { IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonContent } from '@ionic/react';
 import * as React from 'react';
 import { useState } from 'react';
 
 import axios from 'axios';
 import { Redirect } from 'react-router';
 
+import './QuizUI.css'
+
 type Props = {
     setScore: any;
+    detectedObject: any;
 }
 
-const QuizUI: React.FC<Props> = ({setScore}) => {
+const QuizUI: React.FC<Props> = ({setScore, detectedObject}) => {
     
     const [items, setItems] = useState(null);
     const [questionNr, setQuestionNr] = useState(1);
@@ -37,11 +40,60 @@ const QuizUI: React.FC<Props> = ({setScore}) => {
         }
     },[items])
 
+    // Classes object recognition can see: https://github.com/tensorflow/tfjs-models/blob/master/coco-ssd/src/classes.ts
+    let vervoerArray = [
+        'bicycle',
+        'car',
+        'motorcycle',
+        'airplane',
+        'bus',
+        'train',
+        'truck',
+        'boat',
+        'traffic light',
+        'stop sign',
+        'parking meter'
+    ]
+    
+    let voedselArray = [
+        'bottle',
+        'wine glass',
+        'cup',
+        'fork',
+        'knife',
+        'spoon',
+        'bowl',
+        'banana',
+        'apple',
+        'sandwich',
+        'orange',
+        'broccoli',
+        'carrot',
+        'hot dog',
+        'pizza',
+        'donut',
+        'cake',
+        'dining table',
+        'microwave',
+        'oven',
+        'toaster',
+        'sink',
+        'refridgerator'
+    ]
+
     React.useEffect(() => {
-        axios.get("/assets/questions/Questions.json")
+        axios.get("assets/questions/Questions.json")
             .then(
                 res => {
-                    setItems(res.data); 
+                    // Add objects that objectdetection can recognize
+                    if (voedselArray.includes(detectedObject)) {
+                        setItems(res.data.voedsel); 
+                    } else if (vervoerArray.includes(detectedObject)) {
+                        setItems(res.data.vervoer)
+                    } else {
+                        setItems(res.data.overig)
+                    }
+                    
                 }
             )
     }, [])
@@ -50,19 +102,19 @@ const QuizUI: React.FC<Props> = ({setScore}) => {
             return <Redirect to="/tab3"/>
         }else{
             return(
-                <div className="question">
+                <IonCard className="question">
                     <IonCardSubtitle>
                         Question: {questionNr} / {totalQuestions}
                     </IonCardSubtitle>
-                    <p>{question}</p>
-                    <div>
+                    <IonCardTitle>{question}</IonCardTitle>
+                    <IonCardContent>
                         {answers.map((answer, index) => (
-                            <div key={index} className="answer" onClick={(e) => chooseAnswer(answer)}>
-                                {answer[0]}
-                            </div>
+                            <IonCard key={index} className="answer" onClick={(e) => chooseAnswer(answer)}>
+                                <IonCardContent> {answer[0]} </IonCardContent>
+                            </IonCard>
                         ))}
-                    </div>
-                </div>
+                    </IonCardContent>
+                </IonCard>
             )
         }  
     }else {
