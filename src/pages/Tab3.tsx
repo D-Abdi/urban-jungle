@@ -17,7 +17,6 @@ type Props = {
 }
 
 const Tab3: React.FC<Props> = ({score, detectedObject}) => {
-  // This needs to be changed to the value recieved from the quiz
   // Classes object recognition can see: https://github.com/tensorflow/tfjs-models/blob/master/coco-ssd/src/classes.ts
   let vervoerArray = [
     'bicycle',
