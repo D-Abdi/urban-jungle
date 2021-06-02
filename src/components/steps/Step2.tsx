@@ -13,13 +13,17 @@ const Step2: React.FC<Props> = (props) => {
   return (
     <div className="s2Div">
       <p className="text">
-        Deze app helpt jou inzicht krijgen in jouw duurzaamheid.
-        Dit gebeurt middels een aantal quizvragen.
+        De opwarming van de aarde is een heel urgent onderwerp. 
+        Iedereen weet er van, maar voor velen van ons voelt het nog niet helemaal tastbaar.
+        
+    
       </p>
-
       <p className="text">
-        Het resultaat is een AR filter op basis van jouw duurzaamheid.
-        Ook krijg je tips om je duurzaamheid te verbeteren
+        Daarom hebben wij een app gemaakt waarin je als Rotterdammer kan zien wat je nou precies kan doen om dit tegen te gaan.
+      </p>
+      <p className="text">
+
+        Eerst laten we even zien hoe het werkt!
       </p>
 
       <IonIcon icon={arrowForwardCircleSharp} id="arrow" onClick={props.next}></IonIcon>

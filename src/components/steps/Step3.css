@@ -8,11 +8,13 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   font-size: 2.5em;
+  color: #1f7f00;
 }
 
 .s3Desc {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  color: #1f7f00;
 }
 
 .objImg {
@@ -20,8 +22,9 @@
   width: 250px;
   margin: 25px auto;
   padding: 25px;
-  border: 1px solid black;
-  box-shadow: 10px 5px 5px black;
+  border: 1px solid #006805;
+  border-radius: 10px;
+  box-shadow: 8px 5px 5px #1f7f00;
 }
 
 .btn-group {
