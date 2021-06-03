@@ -29,11 +29,11 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
         ]
     } else if (category == "afval") {
         tips = [
-            "Gooi plastic afval bij het plastic en probeer het zo veel mogelijk te vermijden. Als Willem van Oranje een plastic flesje had begraven zouden wij die nog steeds kunnen vinden.",
+            "Gooi plastic afval bij het plastic en probeer het zoveel mogelijk te vermijden. Als Willem van Oranje een plastic flesje had begraven zouden wij die nog steeds kunnen vinden.",
             "Glas kan oneindig gerecycled worden, mits het wordt ingeleverd in de glasbak!",
             "Neem je eigen tasjes mee naar de winkel.",
-            "Gebruik de gtf-bak voor gtf-afval. Van dit afval wordt biogas en compost gemaakt.",
-            "Scheidt je afval zorgvuldig zodat het goed gerecycled kan worden. Haal bijvoorbeeld je folders uit het plastic voordat je ze bij de oudpapier gooit.",
+            "Gebruik de gft-bak voor gft-afval. Van dit afval wordt biogas en compost gemaakt.",
+            "Scheidt je afval zorgvuldig zodat het goed gerecycled kan worden. Haal bijvoorbeeld je folders uit het plastic voordat je ze bij het oud papier gooit.",
             "Afval scheiden is niet alleen goed voor het milieu, maar is in veel gevallen ook goedkoper dan afvalverbranding.",
             "Koop een waterfles, zodat je niet steeds een nieuw flesje hoeft te kopen en weer weg te gooien.",
             "Hergebruik verpakkingen, zoals ijsbakjes. Hier kan je bijvoorbeeld overgebleven eten in bewaren om later weer op te eten."
