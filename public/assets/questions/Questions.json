@@ -4,12 +4,10 @@
       "question": "Welke autorit is schadelijker voor het milieu?",
       "answers": [
         [
-          "Een autorit binnen de bebouwde kom",
-           5
+          "Een autorit binnen de bebouwde kom", 5
         ],
         [
-          "Een rit buiten de bebouwde kom. ",
-           0
+          "Een rit buiten de bebouwde kom. ", 0
         ]
       ]
     },
@@ -137,110 +135,288 @@
   ],
   "voedsel": [
     {
-      "question": "VOEDSEL Welke autorit is schadelijker voor het milieu?",
+      "question": "Wat is beter om als mens te zijn?",
       "answers": [
         [
-          "Een autorit binnen de bebouwde kom",
-           5
+          "Vegetariër", 0
         ],
         [
-          "Een rit buiten de bebouwde kom. ",
-           0
+          "Flexitariër", 5
         ]
       ]
     },
     {
-      "question": "VOEDSEL Is het milieuvriendelijker om tijdens dal- of spitsuren te reizen met de trein?",
+      "question": "Wat is beter voor het millieu om te kweken?",
       "answers": [ 
         [
-          "Tijdens daluren", 5
+          "Vlees", 0
         ],
         [
-          "Tijdens de spitsuren", 0
+          "Vis", 5
         ]
       ]
     },
     {
-      "question": "VOEDSEL Wat is een schoner vervoersmiddel?",
+      "question": "Hoeveel keer per week eet je vegetarisch?",
       "answers":[
         [
-          "Een benzinescooter", 0
+          "Nooit", 0
         ],
         [
-          "Een reguliere auto", 5
+          "1 of 2 keer per week", 2
+        ],
+        [
+          "3 tot 5 keer per week", 4
+        ],
+        [
+          "Meer dan 5 keer per week", 5
         ]
     ]
     },
     {
-      "question": "VOEDSEL Wanneer reis jij met de fiets?",
+      "question": "Van welk vee wordt het meeste vlees gebruikt?",
       "answers":[
         [ 
-          "Elke dag, bijvoorbeeld om ermee naar school te gaan.", 5
+          "De koe", 0
         ],
         [
-          "2 tot 3 keer per week", 3
+          "Het varken", 5
         ],
         [
-          "Minder dan 2 keer per week", 1
+          "De kip", 0
+        ],
+        [
+          "Het schaap", 0
+        ]
+      ]
+    },
+    {
+      "question": "Welk vee is het beste om te fokken?",
+      "answers":[
+        [
+          "Koeien", 5
+        ],
+        [
+          "Varkens", 0
+        ],
+        [
+          "Kippen", 0
+        ],
+        [
+          "Schapen", 0
+        ]
+      ]
+    },
+    {
+      "question": "Hoe vaak koop je biologische producten?",
+      "answers":[
+        [ 
+          "Altijd als die keuze er is", 5
+        ],
+        [
+          "Alleen bij groenten", 2
+        ],
+        [ 
+          "Alleen bij vlees", 2
         ],
         [
           "Nooit", 0
-        ]
-      ]
-    },
-    {
-      "question": "VOEDSEL Wat is de minst milieuvriendelijke manier van reizen?",
-      "answers":[
-        [
-          "Vliegtuig", 0
-        ],
-        [
-          "Auto", 2
-        ],
-        [
-          "Bus", 3
-        ],
-        [
-          "Fiets", 5
-        ]
-      ]
-    },
-    {
-      "question": "VOEDSEL Hoe vaak ga jij op vliegvakantie?",
-      "answers":[
-        [ 
-          "1 tot 2 keer per jaar", 2
-        ],
-        [
-          "3 tot 5 keer per jaar", 1
-        ],
-        [ 
-          "Vaker dan 5 keer per jaar", 0
-        ],
-        [
-          "Nooit", 5
         ]
   
       ]
     },
     {
-      "question": "VOEDSEL Heb je een elektrisch voertuig?",
+      "question": "Wanneer is iets biologisch verbouwd?",
       "answers":[
         [
-          "Ja, een elektrische fiets of scooter", 3
+          "Als het in een kas is verbouwd", 0
         ],
         [
-          "Ja, een elektrische auto", 5
+          "Als het buiten is verbouwd", 0
         ],
         [
-          "Nee al mijn vervoersmiddelen maken gebruik van fossiele brandstoffen", 0
-        ],
-        [
-          "Nee ik maak gebruik van het OV of mijn fiets", 5
+          "Als het is verbouwd zonder mest, syntetische producten, of bestrijdingsmiddelen", 5
         ]
       ]
-    },{
-      "question": "VOEDSEL Welk vervoersmiddel gebruik je het meest?",
+    },
+    {
+      "question": "Wat is beter voor het millieu?",
+      "answers":[
+        [ 
+          "Biologische producten", 5
+        ],
+        [
+          "Gangbare producten (waarbij bijvoorbeeld kunstmest gebruikt wordt)", 0
+        ]
+      ]
+    },
+    {
+      "question": "Hoe vaak per week eet je vis?",
+      "answers":[
+        [
+          "Nooit", 0
+        ],
+        [
+          "1 of 2 keer per week", 2
+        ],
+        [
+          "3 tot 5 keer per week", 4
+        ],
+        [
+          "Meer dan 5 keer per week", 5
+        ]
+      ]
+    }
+  ],
+  "afval": [
+    {
+      "question": "Hoelang duurt het voordat een plastic flesje vergaat?",
+      "answers":[
+        [ 
+          "30 jaar", 0
+        ],
+        [
+          "100 jaar", 0
+        ],
+        [ 
+          "200 jaar", 0
+        ],
+        [
+          "500 jaar", 5
+        ]
+      ]
+    },
+    {
+      "question": "Hoeveel afval produceert een persoon in een jaar?",
+      "answers":[
+        [ 
+          "~300kg", 0
+        ],
+        [
+          "~400kg", 0
+        ],
+        [ 
+          "~500kg", 5
+        ],
+        [
+          "~600kg", 0
+        ]
+      ]
+    },
+    {
+      "question": "Waar gooi je schillen weg?",
+      "answers":[
+        [ 
+          "In de tuin", 0
+        ],
+        [
+          "In de gtf-bak", 5
+        ],
+        [ 
+          "In de vuilisbak", 0
+        ]
+      ]
+    },
+    {
+      "question": "Wat kan oneindig gerecycled worden?",
+      "answers":[
+        [ 
+          "Gft-afval", 0
+        ],
+        [
+          "Plastic", 0
+        ],
+        [ 
+          "Papier", 0
+        ],
+        [ 
+          "Glas", 5
+        ]
+      ]
+    },
+    {
+      "question": "Beter eenmalig een plastic fles of een glazen fles? ",
+      "answers":[
+        [ 
+          "Eenmalig een plastic fles, maar alleen als deze 6 keer lichter is dan de glazen fles.", 5
+        ],
+        [
+          "Eenmalig een plastic fles, ook als deze even zwaar is als een glazen fles.", 0
+        ],
+        [ 
+          "Een glazen fles.", 0
+        ]
+      ]
+    },
+    {
+      "question": "Hoe vaak hergebruik jij plastic tasjes?",
+      "answers":[
+        [ 
+          "Elk tasje totdat het kapot is.", 5
+        ],
+        [
+          "2 of 3 keer.", 4
+        ],
+        [ 
+          "1 keer.", 2
+        ],
+        [ 
+          "Nooit.", 0
+        ]
+      ]
+    },
+    {
+      "question": "Scheid je plastic en/of oud papier?",
+      "answers":[
+        [ 
+          "Alleen plastic.", 2
+        ],
+        [
+          "Alleen oud papier.", 2
+        ],
+        [ 
+          "Plastic en oud papier.", 5
+        ],
+        [ 
+          "Geen van beide.", 0
+        ]
+      ]
+    },
+    {
+      "question": "Hoeveel textiel wordt er in Nederland gescheiden?",
+      "answers":[
+        [ 
+          "21%", 0
+        ],
+        [
+          "36%", 0
+        ],
+        [ 
+          "44%", 5
+        ],
+        [ 
+          "57%", 0
+        ]
+      ]
+    },
+    {
+      "question": "Let jij op het verpakkingsmateriaal wanneer je een product koopt?",
+      "answers":[
+        [ 
+          "Wanneer mogelijk koop ik altijd producten die duurzaam zijn verpakt.", 5
+        ],
+        [
+          "Alleen als de duurzame optie niet duurder is.", 2
+        ],
+        [ 
+          "Ik let niet op de verpakking.", 0
+        ]
+      ]
+    }
+  ],
+  "overig": [
+    {
+      "question": "OVERIG Welk vervoersmiddel gebruik je het meest?",
       "answers":[
         [ 
           "De auto", 0
@@ -254,7 +430,7 @@
       ]
     },
     {
-      "question": "VOEDSEL Hoe vaak zit u alleen in de auto?",
+      "question": "OVERIG Hoe vaak zit u alleen in de auto?",
       "answers":[
         [ 
           "Altijd", 0
@@ -269,9 +445,7 @@
           "Ik heb geen auto, dus ik rijd altijd mee", 5
         ]
       ]
-    }
-  ],
-  "overig": [
+    },
     {
       "question": "OVERIG Welk vervoersmiddel gebruik je het meest?",
       "answers":[

@@ -1,4 +1,4 @@
-import { IonButton, IonCol, IonContent, IonItem, IonLabel, IonList, IonModal, IonRow, IonThumbnail } from '@ionic/react';
+import { IonButton, IonCol, IonContent, IonItem, IonLabel, IonList, IonModal, IonRow, IonThumbnail, IonTitle } from '@ionic/react';
 import * as React from 'react';
 import { useState } from 'react';
 import './ResultsBox.css';
@@ -13,27 +13,38 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
     let tips = [];
     if (category == "vervoer") {
         tips = [
-            "Oh weet ik veel.. Ga fietsen?",
-            "Treinen amirite.",
-            "Fietsen is beter ALS met de bus!",
-            "Nog een tips?",
-            "When will you learn, that your actions have consequences!?"
+            "Vervoer tip #1",
+            "Vervoer tip #2",
+            "Vervoer tip #3",
+            "Vervoer tip #4",
+            "Vervoer tip #5"
         ]
     } else if (category == "voedsel") {
         tips = [
-            "Dit is de eerste tip over voedsel!",
-            "Hmmm eten.",
-            "Ja ik heb niet meer zoveel ideeën. Niet dat ik die eerder wel had tho..",
-            "Roadkills kan je ook eten.",
-            "Hoe proeft pinguin?"
+            "Voedsel tip #1",
+            "Voedsel tip #2",
+            "Voedsel tip #3",
+            "Voedsel tip #4",
+            "Voedsel tip #5"
+        ]
+    } else if (category == "afval") {
+        tips = [
+            "Gooi plastic afval bij het plastic en probeer het zoveel mogelijk te vermijden. Als Willem van Oranje een plastic flesje had begraven zouden wij die nog steeds kunnen vinden.",
+            "Glas kan oneindig gerecycled worden, mits het wordt ingeleverd in de glasbak!",
+            "Neem je eigen tasjes mee naar de winkel.",
+            "Gebruik de gft-bak voor gft-afval. Van dit afval wordt biogas en compost gemaakt.",
+            "Scheidt je afval zorgvuldig zodat het goed gerecycled kan worden. Haal bijvoorbeeld je folders uit het plastic voordat je ze bij het oud papier gooit.",
+            "Afval scheiden is niet alleen goed voor het milieu, maar is in veel gevallen ook goedkoper dan afvalverbranding.",
+            "Koop een waterfles, zodat je niet steeds een nieuw flesje hoeft te kopen en weer weg te gooien.",
+            "Hergebruik verpakkingen, zoals ijsbakjes. Hier kan je bijvoorbeeld overgebleven eten in bewaren om later weer op te eten."
         ]
     } else if (category == "overig") {
         tips = [
-            "Afval moet je niet eten.",
-            "Scheid je afval.",
-            "Ionic is kut om te stylen.",
-            "Of ik snap gewoon niet hoe je het moet gebruiken, dat is ook een viable optie..",
-            "Afval, maak het niet! Dan hoef je het ook niet op te ruimen :o"
+            "Overig tip #1",
+            "Overig tip #2",
+            "Overig tip #3",
+            "Overig tip #4",
+            "Overig tip #5"
         ]
     }
 
@@ -41,8 +52,8 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
     const tipsElement = tips.map((tip, index) =>
         <IonItem key={index}>
             <IonLabel className="tipContainer ion-text-wrap">
-                <h2>Tip #{index + 1}</h2>
-                <h3>{category.charAt(0).toUpperCase()  + category.slice(1)}</h3>
+                <h2></h2>
+                <h2>{category.charAt(0).toUpperCase()  + category.slice(1)} tip #{index + 1}</h2>
                 <p>{tip}</p>
             </IonLabel>
         </IonItem>
@@ -69,7 +80,7 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
                                 <IonThumbnail slot="start">
                                     <img src="./assets/icon/plantIcon.jpg" />
                                 </IonThumbnail>
-                                <IonLabel className="ion-text-wrap">Jij hebt {points} duurzaamheidspunten!</IonLabel>
+                                <IonTitle className="ion-text-wrap">Jij hebt {points}/45 duurzaamheidspunten!</IonTitle>
                             </IonItem>
                         </IonCol>
                         <IonCol></IonCol>
