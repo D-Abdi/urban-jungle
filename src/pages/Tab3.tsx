@@ -56,6 +56,7 @@ const Tab3: React.FC<Props> = ({score, detectedObject}) => {
   ]
   let afvalArray = [
     'bottle',
+    'person',
     'sink',
     'backpack',
     'handbag',

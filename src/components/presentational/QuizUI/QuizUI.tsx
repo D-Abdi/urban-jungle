@@ -79,6 +79,7 @@ const QuizUI: React.FC<Props> = ({setScore, detectedObject}) => {
     ]
     let afvalArray = [
         'bottle',
+        'person',
         'sink',
         'backpack',
         'handbag',

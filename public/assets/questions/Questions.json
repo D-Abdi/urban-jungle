@@ -270,30 +270,146 @@
   ],
   "afval": [
     {
-      "question": "AFVAL Welk vervoersmiddel gebruik je het meest?",
+      "question": "Hoelang duurt het voordat een plastic flesje vergaat?",
       "answers":[
         [ 
-          "De auto", 0
+          "30 jaar", 0
         ],
         [
-          "Het ov", 4
+          "100 jaar", 0
         ],
         [ 
-          "De fiets", 5
+          "200 jaar", 0
+        ],
+        [
+          "500 jaar", 5
         ]
       ]
     },
     {
-      "question": "AFVAL Welk vervoersmiddel gebruik je het meest?",
+      "question": "Hoeveel afval produceert een persoon in een jaar?",
       "answers":[
         [ 
-          "De auto", 0
+          "~300kg", 0
         ],
         [
-          "Het ov", 4
+          "~400kg", 0
         ],
         [ 
-          "De fiets", 5
+          "~500kg", 5
+        ],
+        [
+          "~600kg", 0
+        ]
+      ]
+    },
+    {
+      "question": "Waar gooi je schillen weg?",
+      "answers":[
+        [ 
+          "In de tuin", 0
+        ],
+        [
+          "In de gtf-bak", 5
+        ],
+        [ 
+          "In de vuilisbak", 0
+        ]
+      ]
+    },
+    {
+      "question": "Wat kan oneindig gerecycled worden?",
+      "answers":[
+        [ 
+          "Gft-afval", 0
+        ],
+        [
+          "Plastic", 0
+        ],
+        [ 
+          "Papier", 0
+        ],
+        [ 
+          "Glas", 5
+        ]
+      ]
+    },
+    {
+      "question": "Beter eenmalig een plastic fles of een glazen fles? ",
+      "answers":[
+        [ 
+          "Eenmalig een plastic fles, maar alleen als deze 6 keer lichter is dan de glazen fles.", 5
+        ],
+        [
+          "Eenmalig een plastic fles, ook als deze even zwaar is als een glazen fles.", 0
+        ],
+        [ 
+          "Een glazen fles.", 0
+        ]
+      ]
+    },
+    {
+      "question": "Hoe vaak hergebruik jij plastic tasjes?",
+      "answers":[
+        [ 
+          "Elk tasje totdat het kapot is.", 5
+        ],
+        [
+          "2 of 3 keer.", 4
+        ],
+        [ 
+          "1 keer.", 2
+        ],
+        [ 
+          "Nooit.", 0
+        ]
+      ]
+    },
+    {
+      "question": "Scheid je plastic en/of oud papier?",
+      "answers":[
+        [ 
+          "Alleen plastic.", 2
+        ],
+        [
+          "Alleen oud papier.", 2
+        ],
+        [ 
+          "Plastic en oud papier.", 5
+        ],
+        [ 
+          "Geen van beide.", 0
+        ]
+      ]
+    },
+    {
+      "question": "Hoeveel textiel wordt er in Nederland gescheiden?",
+      "answers":[
+        [ 
+          "21%", 0
+        ],
+        [
+          "36%", 0
+        ],
+        [ 
+          "44%", 5
+        ],
+        [ 
+          "57%", 0
+        ]
+      ]
+    },
+    {
+      "question": "Let jij op het verpakkingsmateriaal wanneer je een product koopt?",
+      "answers":[
+        [ 
+          "Wanneer mogelijk koop ik altijd producten die duurzaam zijn verpakt.", 5
+        ],
+        [
+          "Alleen als de duurzame optie niet duurder is.", 2
+        ],
+        [ 
+          "Ik let niet op de verpakking.", 0
         ]
       ]
     }
