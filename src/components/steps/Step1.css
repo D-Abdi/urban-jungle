@@ -1,0 +1,29 @@
+.s1Div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 50px 0;
+  margin: 100px auto;
+}
+
+.title {
+  color: #53b86e;
+  font-family: "Boogaloo";
+  font-size: 4em;
+  text-align: center;
+}
+
+.btn {
+  font-size: 1.5em;
+  border-radius: 5px;
+  padding: 18px 0;
+  margin-top: 75px;
+  background-color: #69d686;
+  color: rgb(226, 223, 223);
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #74ee94;
+  color: rgb(255, 255, 255);
+}

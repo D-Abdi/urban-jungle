@@ -1,0 +1,42 @@
+.s3Div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.s3Title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 2.5em;
+  color: #1f7f00;
+}
+
+.s3Desc {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: #1f7f00;
+}
+
+.objImg {
+  height: 300px;
+  width: 250px;
+  margin: 25px auto;
+  padding: 25px;
+  border: 1px solid #006805;
+  border-radius: 10px;
+  box-shadow: 8px 5px 5px #1f7f00;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 25px;
+  color: #69d686;
+  margin: 50px 25px;
+}
+
+.s3Arrow {
+  height: 75px;
+  width: 75px;
+}

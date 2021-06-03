@@ -1,0 +1,9 @@
+.questionMark {
+  height: 250px;
+  width: 200px;
+  margin: 25px auto;
+  padding: 25px;
+  border: 1px solid #006805;
+  border-radius: 10px;
+  box-shadow: 8px 5px 5px #1f7f00;
+}
