@@ -1,13 +1,13 @@
 {
   "vervoer": [
     {
-      "question": "Welke autorit is schadelijker voor het milieu?",
+      "question": "Welke autorit is minder schadelijk voor het milieu?",
       "answers": [
         [
-          "Een autorit binnen de bebouwde kom", 5
+          "Een autorit binnen de bebouwde kom", 0
         ],
         [
-          "Een rit buiten de bebouwde kom. ", 0
+          "Een rit buiten de bebouwde kom. ", 5
         ]
       ]
     },
@@ -416,13 +416,13 @@
   ],
   "overig": [
     {
-      "question": "Welke autorit is schadelijker voor het milieu?",
+      "question": "Welke autorit is minder schadelijk voor het milieu?",
       "answers": [
         [
-          "Een autorit binnen de bebouwde kom", 5
+          "Een autorit binnen de bebouwde kom", 0
         ],
         [
-          "Een rit buiten de bebouwde kom. ", 0
+          "Een rit buiten de bebouwde kom. ", 5
         ]
       ]
     },
