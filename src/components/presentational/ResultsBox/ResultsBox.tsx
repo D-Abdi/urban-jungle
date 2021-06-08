@@ -40,11 +40,10 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
         ]
     } else if (category == "overig") {
         tips = [
-            "Overig tip #1",
-            "Overig tip #2",
-            "Overig tip #3",
-            "Overig tip #4",
-            "Overig tip #5"
+            "Een autorit binnen de bebouwde kom is schadelijker voor het millieu, omdat je telkens gas moet geven en weer remmen.",
+            "Neem je eigen tasjes mee naar de winkel.",
+            "Koeien zijn het beste om te fokken. Naast vlees zijn ze een bron van melk en leer. Dit geld alleen wanneer de melk en leer ook daadwerkelijk gebruikt worden.",
+            "Fietsen is een erg duurzame manier van vervoer. Ook zorgt het ervoor dat je in beweging blijft!"
         ]
     }
 
