@@ -16,13 +16,15 @@ type Props = {
   setDetectedObject: any;
 }
 
+let camWidth = window.innerWidth;
+
 const videoConstraints = {
-  facingMode: "environment",
-  width: 350,
-  height: 500
+  width: camWidth,
+  facingMode: "environment"
 };
 
 const regularVideo = {
+  width: camWidth,
   facingMode: "user"
 }
 
@@ -34,10 +36,10 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
   const runCoco = async () => {
     const net : any = await cocossd.load();
     
-    //  Loop and detect hands 
+    // Loop and detect hands 
     setInterval(() => {
       detect(net);
-    }, 10);
+    }, 100);
   };
 
   const detect = async (net : any) => {
@@ -100,35 +102,20 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
           <IonTitle>Object Detection</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonGrid>
-            <IonRow>
-              <IonCol>
-                <Webcam
-                    ref={webcamRef}
-                    muted={true} 
-                    id="OD-Webcam"
-                    screenshotFormat="image/jpeg"
-                    videoConstraints={window.innerWidth <= 400 ? videoConstraints : regularVideo}
-                />
-              </IonCol>
-            </IonRow>
-            
-            <IonRow>
-            <IonCol>
-              <canvas
-                  ref={canvasRef}
-                  id="OD-Canvas"
-                />
-              </IonCol>
-            </IonRow>
-          
-            <IonRow>
-              <IonCol>
-                <IonButton onClick={stop} className="snap-a-pic">Scan het object! <IonIcon icon={scanOutline} id="scanOutline" /></IonButton>
-              </IonCol>
-            </IonRow>
-        </IonGrid>
+      <IonContent>
+        <Webcam
+          ref={webcamRef}
+          muted={true} 
+          id="OD-Webcam"
+          screenshotFormat="image/jpeg"
+          videoConstraints={window.innerWidth < 1000 ? videoConstraints : regularVideo}
+          mirrored={window.innerWidth < 1000 ? false : true}
+        />
+        <canvas
+          ref={canvasRef}
+          id="OD-Canvas"
+        />
+        <IonButton onClick={stop} className="snap-a-pic">Scan het object! <IonIcon icon={scanOutline} id="scanOutline" /></IonButton>
       </IonContent>
     </IonPage>
   );
