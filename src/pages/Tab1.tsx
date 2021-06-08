@@ -17,7 +17,7 @@ type Props = {
 }
 
 const videoConstraints = {
-  facingMode: "user",
+  facingMode: "environment",
   width: 350,
   height: 500
 };
@@ -30,16 +30,31 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
   // History
   let history = useHistory();
 
-  // Main function
-  const runCoco = async () => {
-    const net : any = await cocossd.load();
-    
-    //  Loop and detect hands 
-    setInterval(() => {
-      detect(net);
-    }, 10);
 
-  };
+
+  // const componentDidMount = () => {
+  //   // Main function
+  //   const runCoco = async () => {
+  //     const net : any = await cocossd.load();
+      
+  //     //  Loop and detect hands 
+  //     setInterval(() => {
+  //       detect(net);
+  //     }, 10);
+  //   };
+  // }
+
+      // Main function
+    const runCoco = async () => {
+      const net : any = await cocossd.load();
+      
+      //  Loop and detect hands 
+      setInterval(() => {
+        detect(net);
+      }, 10);
+
+    };
+
 
   const detect = async (net : any) => {
     // Check data is available
@@ -78,7 +93,11 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
   // use run coco every cycle
   useEffect(()=> {
     runCoco();
-  },[detect]);
+
+    return function cleanup() {
+      console.log("Cleanup!")
+    }
+  },[]);
 
   // Better function for taking a picture
   const stop = () => {
