@@ -4,7 +4,7 @@ import Webcam from "react-webcam";
 import { useHistory } from 'react-router-dom'
 
 import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
-import { cameraOutline } from 'ionicons/icons';
+import { scanOutline } from 'ionicons/icons';
 import { drawRect }  from '../components/functional/drawRect/drawRect';
 
 import './Tab1.css';
@@ -30,31 +30,15 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
   // History
   let history = useHistory();
 
-
-
-  // const componentDidMount = () => {
-  //   // Main function
-  //   const runCoco = async () => {
-  //     const net : any = await cocossd.load();
-      
-  //     //  Loop and detect hands 
-  //     setInterval(() => {
-  //       detect(net);
-  //     }, 10);
-  //   };
-  // }
-
-      // Main function
-    const runCoco = async () => {
-      const net : any = await cocossd.load();
-      
-      //  Loop and detect hands 
-      setInterval(() => {
-        detect(net);
-      }, 10);
-
-    };
-
+  // Main function
+  const runCoco = async () => {
+    const net : any = await cocossd.load();
+    
+    //  Loop and detect hands 
+    setInterval(() => {
+      detect(net);
+    }, 10);
+  };
 
   const detect = async (net : any) => {
     // Check data is available
@@ -85,8 +69,6 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
       if (obj[0] !== undefined && obj[0].class !== false) {
         setDetectedObject(obj[0].class)
       } else return 
-
-      // console.log(obj[0].class)
     }
   };
 
@@ -143,7 +125,7 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
           
             <IonRow>
               <IonCol>
-              <IonButton onClick={stop} className="snap-a-pic">Take A Picture!<IonIcon icon={cameraOutline} id="cameraOutline" /></IonButton>
+                <IonButton onClick={stop} className="snap-a-pic">Scan het object! <IonIcon icon={scanOutline} id="scanOutline" /></IonButton>
               </IonCol>
             </IonRow>
         </IonGrid>

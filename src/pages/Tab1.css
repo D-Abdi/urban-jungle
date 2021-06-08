@@ -17,7 +17,8 @@
   z-index: 3;
 }
 
-#cameraOutline {
+#scanOutline {
+  margin-left: 10px;
   height: 100px;
 }
 
