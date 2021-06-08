@@ -171,7 +171,7 @@
         [
           "Meer dan 5 keer per week", 5
         ]
-    ]
+      ]
     },
     {
       "question": "Van welk vee wordt het meeste vlees gebruikt?",
@@ -416,21 +416,100 @@
   ],
   "overig": [
     {
-      "question": "OVERIG Welk vervoersmiddel gebruik je het meest?",
-      "answers":[
-        [ 
-          "De auto", 0
+      "question": "Welke autorit is schadelijker voor het milieu?",
+      "answers": [
+        [
+          "Een autorit binnen de bebouwde kom", 5
         ],
         [
-          "Het ov", 4
-        ],
-        [ 
-          "De fiets", 5
+          "Een rit buiten de bebouwde kom. ", 0
         ]
       ]
     },
     {
-      "question": "OVERIG Hoe vaak zit u alleen in de auto?",
+      "question": "Hoe vaak hergebruik jij plastic tasjes?",
+      "answers":[
+        [ 
+          "Elk tasje totdat het kapot is.", 5
+        ],
+        [
+          "2 of 3 keer.", 4
+        ],
+        [ 
+          "1 keer.", 2
+        ],
+        [ 
+          "Nooit.", 0
+        ]
+      ]
+    },
+    {
+      "question": "Welk vee is het beste om te fokken?",
+      "answers":[
+        [
+          "Koeien", 5
+        ],
+        [
+          "Varkens", 0
+        ],
+        [
+          "Kippen", 0
+        ],
+        [
+          "Schapen", 0
+        ]
+      ]
+    },
+    {
+      "question": "Wanneer reis jij met de fiets?",
+      "answers":[
+        [ 
+          "Elke dag, bijvoorbeeld om ermee naar school te gaan.", 5
+        ],
+        [
+          "2 tot 3 keer per week", 3
+        ],
+        [
+          "Minder dan 2 keer per week", 1
+        ],
+        [
+          "Nooit", 0
+        ]
+      ]
+    },
+    {
+      "question": "Wanneer is iets biologisch verbouwd?",
+      "answers":[
+        [
+          "Als het in een kas is verbouwd", 0
+        ],
+        [
+          "Als het buiten is verbouwd", 0
+        ],
+        [
+          "Als het is verbouwd zonder mest, syntetische producten, of bestrijdingsmiddelen", 5
+        ]
+      ]
+    },
+    {
+      "question": "Hoeveel afval produceert een persoon in een jaar?",
+      "answers":[
+        [ 
+          "~300kg", 0
+        ],
+        [
+          "~400kg", 0
+        ],
+        [ 
+          "~500kg", 5
+        ],
+        [
+          "~600kg", 0
+        ]
+      ]
+    },
+    {
+      "question": "Hoe vaak zit u alleen in de auto?",
       "answers":[
         [ 
           "Altijd", 0
@@ -447,33 +526,36 @@
       ]
     },
     {
-      "question": "OVERIG Welk vervoersmiddel gebruik je het meest?",
+      "question": "Hoeveel keer per week eet je vegetarisch?",
       "answers":[
-        [ 
-          "De auto", 0
+        [
+          "Nooit", 0
         ],
         [
-          "Het ov", 4
+          "1 of 2 keer per week", 2
         ],
-        [ 
-          "De fiets", 5
+        [
+          "3 tot 5 keer per week", 4
+        ],
+        [
+          "Meer dan 5 keer per week", 5
         ]
       ]
     },
     {
-      "question": "OVERIG Hoe vaak zit u alleen in de auto?",
+      "question": "Scheid je plastic en/of oud papier?",
       "answers":[
         [ 
-          "Altijd", 0
+          "Alleen plastic.", 2
+        ],
+        [
+          "Alleen oud papier.", 2
         ],
         [ 
-          "Soms, ik rijd soms alleen en soms ook samen", 1
+          "Plastic en oud papier.", 5
         ],
-        [
-          "Bijna nooit, er rijd altijd wel iemand mee", 3
-        ],
-        [
-          "Ik heb geen auto, dus ik rijd altijd mee", 5
+        [ 
+          "Geen van beide.", 0
         ]
       ]
     }
