@@ -13,11 +13,15 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
     let tips = [];
     if (category == "vervoer") {
         tips = [
-            "Vervoer tip #1",
-            "Vervoer tip #2",
-            "Vervoer tip #3",
-            "Vervoer tip #4",
-            "Vervoer tip #5"
+            "Een autorit binnen de bebouwde kom veroorzaakt meer CO2 en luchtvervuiling zoals fijnstof dan een even lange rit met dezelfde auto buiten de bebouwde kom. Dit komt doordat er meer geremd, geschakeld en opgetrokken wordt. Bovendien komen meer mensen in aanraking met vervuiling. ",
+            "Het is beter voor het milieu om tijdens daluren te reizen met de trein. De rede hiervoor is dat de bezettingsgraad (de hoeveelheid passagiers) tijdens de spits bepaald hoeveel bussen en wagons er worden gebruikt en verkocht. Als er meer in de daluren wordt gereisd, zal de bezettingsgraad tijdens de spits verminderen, waardoor er kortere en minder bussen en wagons nodig zijn, wat dus beter is voor het milieu. ",
+            "Een benzinescooter is vervuilender dan een reguliere benzine auto. Hoe ouder je scooter is, hoe meer hij vervuilt. ",
+            "Hoe vaker de fiets gebruikt wordt, hoe beter. ",
+            "Vliegtuig is het correcte antwoord. Dit voertuig vervuilt het milieu het meest.",
+            "Hoe minder er op vliegvakantie wordt gegaan hoe beter want het vliegtuig is het meest vervuilende vervoersmiddel. Door vliegen worden er CO2, stikstofoxiden, roet en andere broeikasgassen uitgestoten in de hogere atmosfeer. Dit geeft een extra broeikas effect . Het beste alternatief voor het vliegtuig is de trein. De trein is een schonere en veiligere manier van reizen, het is vaak wel duurder (en heeft ook zeker nog zijn onhandigheden). ",
+            "Een elektrische auto of scooter is veel beter voor het milieu. Wel is het zo dat een scooter die gebruik maakt van fossiele brandstoffen schadelijker is dan een benzine auto. ",
+            "De fiets of lopend zijn de beste uitkomsten. Daarna het ov en als laatst de auto. ",
+            "Alleen in de auto zitten is schadelijker voor het milieu dan samen in een auto zitten. De klimaatimpact van auto's hangt af van het aantal inzittenden, het bouwjaar en hoe zuinig de auto is."
         ]
     } else if (category == "voedsel") {
         tips = [
