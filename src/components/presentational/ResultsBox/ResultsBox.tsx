@@ -25,11 +25,15 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
         ]
     } else if (category == "voedsel") {
         tips = [
-            "Voedsel tip #1",
-            "Voedsel tip #2",
-            "Voedsel tip #3",
-            "Voedsel tip #4",
-            "Voedsel tip #5"
+            "als mens is het beter om flexitariër te zijn. Een mens heeft namelijk stoffen nodig die veel in vlees voorkomen. Vlees is dus belangrijk voor de mens. De hoeveelheid vlees die nu wordt gegeten en de hoeveelheid dieren die ervoor worden geslacht is wel veel te hoog en slecht voor het millieu, dit moet dus verminderd worden.",
+            "Vis is veel minder schadelijk voor het millieu om te kweken. Het kweken van vee zorgt voor veel vervuilende gassen van zowel de dieren als de machines die worden gebruikt om de dieren te houden en te verwerken. Wat ook een voordeel is is dat er geen grondgebied wat voor andere dingen gebruikt kan worden in beslag wordt genomen. Vissen worden namelijk in water gekweekt.",
+            "Het is goed om minimaal 1 tot 2 keer per week vis te eten. Vis is heel gezond omdat er veel mineralen inzitten en er veel eiwitten en gezonde vetten inzitten die onmisbaar zijn voor je lichaam. Daarnaast is het voor het milieu een stuk beter om vis te kweken.",
+            "Het is voor het millieu beter als iedereen minimaal 1 tot 2 keer per week vegatarisch zou eten. Dan is er namelijk minder vraag naar vlees, en wordt er in de toekomst minder vee gehouden.",
+            "Van het varken wordt het meest gebruikt. Het varken wordt namelijk helemaal gebruikt voor zowel mensen als dieren. Zo wordt er van varken zowel hondenvoer en kauwstokken e.d. als vlees voor mensen gemaakt en gaat er bijna niks van het varken verloren.",
+            "Van koeien krijgen vlees, melk en leer. Dit zijn producten die heel veel worden gebruikt in de samenleving. Koeien geven een groot gedeelte van hun leven melk, waardoor ze al heel waardevol zijn voordat ze geslacht worden. Aangezien we van één dier meerdere producten krijgen is de koe het beste dier om te kweken.",
+            "Het is niet slecht om biologische producten te kopen, dan weet je namelijk dat er geen schadelijke producten in zitten, en dan weet je dat de dieren die zijn gedood voor het vlees geen slecht leven heeft gehad.",
+            "Een product is biologisch als er geen synthetische producten worden gebruikt bij het verbouwen van het product. Als het biologisch wordt verbouwd betekent dat dat er geen schadelijke stoffen op worden gespoten om ongedierte weg te houden, die schadelijk zijn voor de mens.",
+            "Biologische producten zijn beter voor het millieu. Er komen namelijk geen syntetische producten bij kijken. Een nadeel is wel dat het veel meer plek in beslag neemt om biologische prodcuten te verbouwen. Die grond kan dan niet meer gebruikt worden om prodcuten te verbouwen die minder belastend zijn voor het millieu. Ook is er dan minder plek voor natuur."
         ]
     } else if (category == "afval") {
         tips = [
