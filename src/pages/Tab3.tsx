@@ -6,9 +6,9 @@ import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import ResultsBox from '../components/presentational/ResultsBox/ResultsBox';
 
 // Import TSX files of the models
-import TutorialDonut from '../components/presentational/tsxModels/TutorialDonut';
-import TestCity from '../components/presentational/tsxModels/TestCity';
-import TestCityRed from '../components/presentational/tsxModels/TestCityRed';
+import CityBad from '../components/presentational/tsxModels/CityBad';
+import CityNeutral from '../components/presentational/tsxModels/CityNeutral';
+import CityGood from '../components/presentational/tsxModels/CityGood';
 import { CubeTextureLoader } from 'three';
 
 type Props = {
@@ -73,12 +73,11 @@ const Tab3: React.FC<Props> = ({score, detectedObject}) => {
 
   // Load models based on the quiz score 
   // Change number to change the amount of points needed for the other model
-  // Max amount of points possible = 45
-  let model;
-  if (score < 23) { 
-    model = <TestCityRed position={[0,0,0]} />;
-  } else {
-    model = <TestCity position={[0,0,0]} />;
+  let model = <CityNeutral position={[0,0,0]} />;
+  if (score < 15) { 
+    model = <CityBad position={[0,0,0]} />;
+  } else if (score > 30) { 
+    model = <CityGood position={[0,0,0]} />;
   }
 
   // Loads the skybox texture and applies it to the scene.
