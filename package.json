@@ -32,6 +32,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "react-step-builder": "^2.0.10",
     "react-three-fiber": "^6.0.13",
     "react-webcam": "^5.2.3",
     "three": "^0.128.0",

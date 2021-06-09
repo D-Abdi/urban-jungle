@@ -1,0 +1,22 @@
+.s2Div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 50px auto;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25em;
+  color: #1f7f00;
+}
+
+#arrow {
+  color: #69d686;
+  display: flex;
+  justify-items: right;
+  margin-top: 50px;
+  margin-left: 200px;
+  height: 75px;
+  width: 75px;
+}

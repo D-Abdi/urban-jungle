@@ -32,7 +32,6 @@ const Tab3: React.FC<Props> = ({score, detectedObject}) => {
     'parking meter'
   ]
   let voedselArray = [
-    'bottle',
     'wine glass',
     'cup',
     'fork',
@@ -53,14 +52,23 @@ const Tab3: React.FC<Props> = ({score, detectedObject}) => {
     'microwave',
     'oven',
     'toaster',
-    'sink',
     'refridgerator'
+  ]
+  let afvalArray = [
+    'bottle',
+    'person',
+    'sink',
+    'backpack',
+    'handbag',
+    'toilet'
   ]
   let category = 'overig'
   if (voedselArray.includes(detectedObject)) {
     category = 'voedsel'
   } else if (vervoerArray.includes(detectedObject)){
     category = 'vervoer'
+  } else if (afvalArray.includes(detectedObject)){
+    category = 'afval'
   }
 
   // Load models based on the quiz score 
