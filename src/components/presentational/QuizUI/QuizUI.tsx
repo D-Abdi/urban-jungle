@@ -20,12 +20,28 @@ const QuizUI: React.FC<Props> = ({setScore, detectedObject}) => {
     const [question, setQuestion] = useState(null);
     const [answers, setAnswers] = useState(null);
     
-    function chooseAnswer(answer) {
-        setScore((prevScore) => prevScore + answer[1])
-        setQuestionNr(questionNr+1)
-        if(questionNr+1 <= totalQuestions){
-            setQA(questionNr)
+    function chooseAnswer(answer, e) {
+        // If answer is correct (5 points), semi-correct (1 - 5 points) or wrong
+        if (answer[1] === 5) {
+            e.target.style.backgroundColor = 'green';
+        } else if (0 < answer[1] && answer[1] < 5) {
+            e.target.style.backgroundColor = 'orange';
+        } else {
+            e.target.style.backgroundColor = 'red';
         }
+
+        // Wait 1 sec before going to the next question
+        setTimeout(() => {
+            // Reset color
+            e.target.style.backgroundColor = 'var(--backgroundcolor)';
+
+            setScore((prevScore) => prevScore + answer[1])
+            setQuestionNr(questionNr+1)
+            if(questionNr+1 <= totalQuestions){
+                setQA(questionNr)
+            }
+        }, 1000)
+        
     }
 
     function setQA (number){
@@ -100,7 +116,6 @@ const QuizUI: React.FC<Props> = ({setScore, detectedObject}) => {
                     } else {
                         setItems(res.data.overig)
                     }
-                    
                 }
             )
     }, [])
@@ -116,7 +131,7 @@ const QuizUI: React.FC<Props> = ({setScore, detectedObject}) => {
                     <IonCardTitle>{question}</IonCardTitle>
                     <IonCardContent>
                         {answers.map((answer, index) => (
-                            <IonCard key={index} className="answer" onClick={(e) => chooseAnswer(answer)}>
+                            <IonCard key={index} className="answer" onClick={(e) => chooseAnswer(answer, e)}>
                                 <IonCardContent> {answer[0]} </IonCardContent>
                             </IonCard>
                         ))}
