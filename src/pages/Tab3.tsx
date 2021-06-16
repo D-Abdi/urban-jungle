@@ -102,11 +102,6 @@ const Tab3: React.FC<Props> = ({score, detectedObject}) => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>3D viewer</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen>
         <Canvas shadows>
           <PerspectiveCamera makeDefault 
