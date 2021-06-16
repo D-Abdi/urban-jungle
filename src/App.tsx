@@ -44,43 +44,23 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <IonReactRouter>
-        <IonTabs>
-          <IonRouterOutlet>
-            <Route exact path="/tab0">
-              <Tab0 />
-            </Route>
-            <Route exact path="/tab1">
-              <Tab1 webcamRef={webcamRef} canvasRef={canvasRef} detectedObject={detectedObject} setDetectedObject={setDetectedObject} />
-            </Route>
-            <Route exact path="/tab2">
-              <Tab2 setScore={setScore} detectedObject={detectedObject} />
-            </Route>
-            <Route exact path="/tab3">
-              <Tab3 score={score} detectedObject={detectedObject} />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/tab0" />
-            </Route>
-          </IonRouterOutlet>
-          <IonTabBar slot="bottom">
-          <IonTabButton tab="tab0" href="/tab0">
-              <IonIcon icon={homeOutline} />
-              <IonLabel>Homepage</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab1" href="/tab1">
-              <IonIcon icon={videocamOutline} />
-              <IonLabel>Object Detection</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab2" href="/tab2">
-              <IonIcon icon={helpCircleOutline} />
-              <IonLabel>Quiz</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab3" href="/tab3">
-              <IonIcon icon={cubeOutline} />
-              <IonLabel>3D viewer</IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
+        <IonRouterOutlet>
+          <Route exact path="/tab0">
+            <Tab0 />
+          </Route>
+          <Route exact path="/tab1">
+            <Tab1 webcamRef={webcamRef} canvasRef={canvasRef} detectedObject={detectedObject} setDetectedObject={setDetectedObject} />
+          </Route>
+          <Route exact path="/tab2">
+            <Tab2 setScore={setScore} detectedObject={detectedObject} />
+          </Route>
+          <Route exact path="/tab3">
+            <Tab3 score={score} detectedObject={detectedObject} />
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/tab0" />
+          </Route>
+        </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
   )

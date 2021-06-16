@@ -1,22 +1,23 @@
 .s2Div {
   display: flex;
-  flex-direction: column;
-  width: 300px;
-  margin: 50px auto;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 }
 
 .text {
+  width: 70vw;
   font-family: "Roboto", sans-serif;
   font-size: 1.25em;
-  color: #1f7f00;
 }
 
 #arrow {
+  position: absolute;
+  bottom: 10%;
+  right: 10vw;
   color: #69d686;
-  display: flex;
-  justify-items: right;
   margin-top: 50px;
-  margin-left: 200px;
+  justify-self: right;
   height: 75px;
   width: 75px;
 }

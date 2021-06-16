@@ -97,11 +97,6 @@ const Tab1: React.FC<Props> = ({ webcamRef, canvasRef, detectedObject, setDetect
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Object Detection</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent>
         <Webcam
           ref={webcamRef}

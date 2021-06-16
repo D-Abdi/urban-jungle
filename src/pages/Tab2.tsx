@@ -13,11 +13,6 @@ const Tab2: React.FC<Props> = ({setScore, detectedObject}) => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Quiz</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen>
         <QuizUI setScore = {setScore} detectedObject={detectedObject}/>
       </IonContent>
