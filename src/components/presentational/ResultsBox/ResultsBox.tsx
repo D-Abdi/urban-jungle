@@ -74,6 +74,8 @@ const ResultsBox: React.FC<Props> = ({ category, points }) => {
         setShowModal(false)
         // Go to homepage
         history.push('/tab0')
+        // Reload to reset object recognition and quizscore
+        window.location.reload()
     }
 
     return (
