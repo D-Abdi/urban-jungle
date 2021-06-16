@@ -1,9 +1,7 @@
 import React from "react";
 import { IonIcon } from '@ionic/react';
 import { useHistory } from 'react-router-dom'
-import { arrowForwardCircleSharp, arrowBackCircleSharp, helpSharp, checkmarkSharp, checkmarkCircleSharp } from 'ionicons/icons';
-
-import modelImg from '../../assets/images/modelpic.jpeg';
+import { arrowBackCircleSharp, helpSharp, checkmarkCircleSharp } from 'ionicons/icons';
 
 import './Step5.css'
 
@@ -17,7 +15,7 @@ const Step4: React.FC<Props> = (props) => {
 
   return (
     <div className="s3Div">
-      <h1 className="s3Title">Stap 3!</h1>
+      <h1 className="s3Title">Stap 3</h1>
       <h3 className="s3Desc">Zie het resultaat</h3>
         <IonIcon icon={helpSharp} className="questionMark" />
 

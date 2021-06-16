@@ -13,9 +13,9 @@ type Props = {
 const Step3: React.FC<Props> = (props) => {
   return (
     <div className="s3Div">
-      <h1 className="s3Title">Stap 1!</h1>
+      <h1 className="s3Title">Stap 1</h1>
       <h3 className="s3Desc">Scan een object naar keuze</h3>
-      <img src={objImg} alt="Object detection example." className="objImg" />
+      <img src="./assets/images/objectrecognition.png" alt="Object herkenning screenshot" className="objImg" />
 
       <div className="btn-group">
         <IonIcon icon={arrowBackCircleSharp} className="s3Arrow" onClick={props.prev}></IonIcon>
