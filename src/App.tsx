@@ -60,6 +60,9 @@ const App: React.FC = () => {
           <Route exact path="/">
             <Redirect to="/tab0" />
           </Route>
+          <Route exact path="/2020_2021/cmgt_tle34_t3/">
+            <Redirect to="/tab0" />
+          </Route>
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
